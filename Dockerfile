@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:20.04
 RUN apt-get update --quiet -y && \
     apt-get install -y python3-flask python3-pip
 WORKDIR /app
