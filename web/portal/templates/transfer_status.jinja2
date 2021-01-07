@@ -1,0 +1,44 @@
+{%extends "base.jinja2"%}
+
+{%block title%}Transfer Status{%endblock%}
+
+{%block body%}
+
+{%include "header.jinja2"%}
+
+<div class="container">
+  <div class="page-header">
+    <h1>Transfer Status</h1>
+  </div>
+
+  <p class="task-detail">
+    <strong>Task ID</strong>: {{task["task_id"]}}
+  </p>
+  <p class="task-detail">
+    <strong>Source endpoint</strong>: {{task["source_endpoint_display_name"]}}
+  </p>
+  <p class="task-detail">
+    <strong>Destination Endpoint</strong>: {{task["destination_endpoint_display_name"]}}
+  </p>
+  <p class="task-detail">
+    <strong>Request Time</strong>: {{task["request_time"]}}
+  </p>
+  <p class="task-detail">
+    <strong>Status</strong>: {{task["status"]}}
+  </p>
+  <p class="task-detail">
+    <strong>Files transferred</strong>: {{task["files_transferred"]}}
+  </p>
+  <p class="task-detail">
+    <strong>Faults</strong>: {{task["faults"]}}
+  </p>
+
+  <div>
+    <a href="{{url_for('transfer_status', task_id=task.task_id)}}">
+      <button type="button" class="btn btn-lg btn-primary">
+        Refresh
+      </button>
+    </a>
+  </div>
+</div> <!-- container -->
+{%endblock%}

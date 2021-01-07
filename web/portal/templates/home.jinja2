@@ -1,0 +1,120 @@
+{%extends "base.jinja2"%}
+
+{%block title%}Home{%endblock%}
+
+{%block body%}
+<!-- Page Header -->
+<!-- Set background image for this header on the line below. -->
+<header class="intro-header" style="background-image: url({{url_for('static', filename='img/lsst_stills_0009.jpg')}})">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="site-heading">
+          <h1>LSSTDESC Data Portal</h1>
+          <hr class="small">
+          <span class="subheading">Dark Energy Science Collaboration Public Data Access</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<main>
+   <div class="container">
+      <!--Section: Main info-->
+  <!--    <section class="mt-5 wow fadeIn"> -->
+
+        <!--Grid row-->
+        <div class="row">
+
+          <!--Grid column-->
+          <div class="col-md-6 mb-4 px-4">
+
+  <!--          <img src="{{url_for('static',filename='img/logo.png') }}" class="img-fluid" alt="DESC Logo" width="553" height="370"> -->
+            <img src="{{url_for('static',filename='img/logo.png') }}" class="img-fluid" alt="DESC Logo" width="277" height="185">
+
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-6 mb-4 px-4">
+
+            <!-- Main heading -->
+            <!-- <h3 class="h3 mb-3">Dark Energy Science Collaboration</h3> -->
+	    <p>Welcome to the LSSTDESC Data Portal.</p>
+            {%if session.get('is_authenticated')%}
+            <p>Now that you are logged into Globus, click the Transfer link to browse and download data.</p>
+            {%else%}
+            <p>To get started and download datasets, click Login to authenticate into Globus using your organizational login or existing GlobusID. If needed, create a <a href="https://www.globusid.org/what" target="_blank">GlobusID</a> using the "Sign Up" link.</p>
+            {%endif%}
+
+          </div>
+          <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+     <!-- </section> -->
+      <!--Section: Main info-->
+
+
+      <hr class="my-5">
+
+
+      <!--Section: Main features & Quick Start-->
+      <section>
+
+        <h3 class="h3 text-left mb-5">DESC DC2 Data Release v1</h3>
+
+        <!--Grid row-->
+        <div class="row wow fadeIn">
+
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 px-4">
+
+            <!--First row-->
+            <div class="row pb-4">
+              <div class="col-10">
+                <h5 class="feature-title">Getting Started</h5>
+                <p class="grey-text">Overview and detailed instructions.</p>
+              </div>
+            </div>
+            <!--/First row-->
+
+            <!--Second row-->
+            <div class="row pb-4">
+              <div class="col-10">
+                <h5 class="feature-title">Resources</h5>
+                <p class="grey-text">Insert links to DESC Note & DC2 Paper.</p>
+              </div>
+            </div>
+            <!--/Second row-->
+
+          </div>
+          <!--/Grid column-->
+
+        </div>
+        <!--/Grid row-->
+
+      </section>
+      <!--Section: Main features & Quick Start-->
+
+
+    <hr class="my-5">
+
+
+    <!--Section: acknowledgements -->
+  <!--  <section> -->
+      <div class="col-12">
+        <p class="grey-text small text-center pb-4">
+          DESC acknowledges ongoing support from the US Department of Energy, IN2P3 (France), the STFC (United Kingdom), and the NSF and LSST Corporation (United States).
+        </p>
+      </div>
+    <!-- </section> -->
+
+  </div>
+  <!--Container-->
+</main>
+
+{%endblock%}

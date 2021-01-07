@@ -1,0 +1,98 @@
+{%extends 'base.jinja2'%}
+
+{%block title%}Browse {{target.capitalize()}}{%endblock%}
+
+{%block body%}
+
+{%include 'header.jinja2'%}
+
+<div class="container">
+
+    <div class="page-header">
+        <h1>Browse {{target.capitalize()}}</h1>
+    </div>
+
+  <p>
+    Displaying a list of files in {{target}} <strong>{{description}}</strong>.
+
+<!--
+    {%if endpoint_uri%}
+      <br>
+      Click on a file name to display the contents in your browser or download
+      via HTTP.
+    {%endif%}
+
+    {%if webapp_xfer%}
+      <br>
+      You can also <a href="{{webapp_xfer}}" target="_blank" rel="noopener">transfer files using the Globus
+      Webapp</a>.
+    {%endif%}
+-->
+  </p>
+  <p class="grey-text small text-center pb-4">
+    Choose the files you wish to download and click the Transfer button at the bottom of the page.
+  </p>
+
+
+    <div class="form-wrapper">
+      <form class="form-inline" role="form" action="{{url_for('browse')}}" method="post">
+
+        <div class="row">
+          <div class="col-md-12">
+            {%if file_list%}
+              <table class="table">
+                <tr>
+                  <th class="col-md-5 text-left">File Name</th>
+                  <th class="col-md-2 text-right">Size</th>
+                </tr>
+
+                {%for file in file_list%}
+                  <tr>
+                    <td class="col-md-5 text-left">
+                      <i class="fa fa-file"></i>&nbsp;
+
+                      {%if endpoint_uri%}
+                        <a href="{{endpoint_uri}}/{{file.name}}">{{file.name}}</a>
+                      {%else%}
+                        {{file.name}}
+                      {%endif%}
+                    </td>
+                    <td class="col-md-1 text-right">{{file.size}}</td>
+                    <td class="col-md-1 text-center">
+                      <input type="checkbox" name="file" value="{{file.name}}">
+                      <input type="hidden" name="path" value="{{mypath}}">
+                      <input type="hidden" name="id" value="{{myid}}">
+                    </td>
+
+                  </tr>
+               {%endfor%}
+             </table>
+           {%else%}
+             <p>No files found in {{target}}.</p>
+           {%endif%}
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+          <div class="form-actions col-md-7 pull-right">
+            <input name="browse" type="submit" class="btn btn-primary"
+                   value="Transfer">
+          </div>
+        </div>
+        <div class="row">
+          <p class="grey-text small text-center pb-4">
+           After selecting data to download and clicking Transfer, you can select the destination for these files on the next page.
+           For details about choosing a destination and Globus Collections please see the <a href="https://docs.globus.org/how-to/get-started/#access_a_collection" target="_blank">Globus documentation</a>.
+          </p>
+        </div>
+
+      </form>
+    </div> <!-- form -->
+
+
+
+</div> <!-- container -->
+
+{%endblock%}

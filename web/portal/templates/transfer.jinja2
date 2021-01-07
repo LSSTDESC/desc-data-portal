@@ -1,0 +1,71 @@
+{%extends "base.jinja2"%}
+
+{%block title%}Transfer{%endblock%}
+
+{%block body%}
+  {%include "header.jinja2"%}
+
+  <div class="container">
+
+    <div class="page-header">
+      <h1>Repository</h1>
+    </div>
+
+    <p>
+      Select some dataset(s) to transfer
+      <strong>or</strong>
+      click on a dataset name to browse and choose individual files for transfer.
+    </p>
+
+    <div class="form-wrapper">
+      <form class="form-inline" role="form" action="{{url_for('transfer')}}" method="post">
+        <div class="row">
+          <div class="col-md-12">
+            <table class="table">
+              <th class="col-md-5 text-left">
+                Dataset Name
+              </th>
+              <th class="col-md-1 text-center">
+                Select
+              </th>
+
+              {%if datasets%}
+                {%for dataset in datasets%}
+                  <tr>
+                    <td class="col-md-5 text-left">
+                      <i class="fa fa-folder fa-lg"></i>&nbsp;
+                      <a href="{{url_for('browse', dataset_id=dataset['id'])}}">
+                        {{dataset["name"]}}
+                      </a>
+                    </td>
+                    <td class="col-md-1 text-center">
+                      <input type="checkbox" name="dataset" value="{{dataset['id']}}">
+                    </td>
+                  </tr>
+                {%endfor%}
+              {%else%}
+                <p>No datasets found.</p>
+              {%endif%}
+            </table>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+          <div class="form-actions col-md-7 pull-right">
+            <input name="transfer" type="submit" class="btn btn-primary"
+                   value="Transfer">
+          </div>
+        </div>
+        <div class="row">
+          <p class="grey-text small text-center pb-4">
+           After selecting data to download and clicking Transfer, you can select the destination for these files on the next page.
+           For details about choosing a destination and Globus Collections please see the <a href="https://docs.globus.org/how-to/get-started/#access_a_collection" target="_blank">Globus documentation</a>.
+          </p>
+        </div>
+      </form>
+    </div> <!-- form -->
+
+  </div> <!-- container -->
+{%endblock%}

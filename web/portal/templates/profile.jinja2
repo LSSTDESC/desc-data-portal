@@ -1,0 +1,67 @@
+{%extends "base.jinja2"%}
+
+{%block title%}
+  Profile
+{%endblock%}
+
+{%block body%}
+
+  {%include "header.jinja2"%}
+
+  <div class="container">
+    <div class="page-header">
+      <h1>Profile</h1>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <form role="form" action="{{url_for('profile')}}" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              placeholder="full name"
+              required="required"
+              tabindex="1"
+              value="{{session['name']}}"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="me@example.com"
+              required="required"
+              tabindex="2"
+              value="{{session['email']}}"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="institution">Institution/Department</label>
+            <input
+              type="text"
+              id="institution"
+              name="institution"
+              class="form-control"
+              required="required"
+              tabindex="3"
+              value="{{session['institution']}}"
+            >
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{%endblock%}
