@@ -25,6 +25,7 @@
               <th class="col-md-5 text-left">
                 Dataset Name
               </th>
+              <th class="col-md-2 text-right">Size</th>
               <th class="col-md-1 text-center">
                 Select
               </th>
@@ -38,6 +39,7 @@
                         {{dataset["name"]}}
                       </a>
                     </td>
+                    <td class="col-md-1 text-right">{{dataset['size']}}</td>
                     <td class="col-md-1 text-center">
                       <input type="checkbox" name="dataset" value="{{dataset['id']}}">
                     </td>

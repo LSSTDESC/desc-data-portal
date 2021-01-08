@@ -246,7 +246,6 @@ def browse(dataset_id=None, endpoint_id=None, endpoint_path=None):
             urlencode(dict(origin_id=endpoint_id, origin_path=endpoint_path))
 
 
-        #print("endpintURL == " + endpoint_uri)
 
         return render_template('browse.jinja2', endpoint_uri=endpoint_uri,
                            target="dataset" if dataset_id else "endpoint",
