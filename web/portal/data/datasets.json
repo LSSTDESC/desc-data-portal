@@ -11,6 +11,13 @@
         "id": "11767c28-e6c8-4901-92de-3e3d7502c7d4",
         "path": "lsstdesc-public/dc2/run2.2i-dr6-v1/object_dpdd",
         "size": "118 GB"
+    },
+
+    {
+        "name": "CosmoDC2 v1.1.4",
+        "id": "3f93a2d4-65e9-4598-bd4c-a864cae2a195",
+        "path": "lsstdesc-public/dc2/cosmoDC2_v1.1.4",
+        "size": "5.2 TB"
     }
 
 ]
