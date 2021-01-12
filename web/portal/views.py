@@ -21,6 +21,11 @@ def home():
     return render_template('home.jinja2')
 
 
+"DOC routes"
+@app.route('/doc/<doc_name>')
+def render_doc(doc_name):
+    return render_template('doc_template.jinja2', doc_name=doc_name)
+
 @app.route('/signup', methods=['GET'])
 def signup():
     """Send the user to Globus Auth with signup=1."""
