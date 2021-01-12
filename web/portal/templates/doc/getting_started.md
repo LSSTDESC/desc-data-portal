@@ -1,4 +1,4 @@
-<!--- Do not delete this line, it is needed for jinja_markdown to render this page correctly -->
+
 ### Getting Started
 
 * [How to Download data files]({{url_for('download_doc')}})
