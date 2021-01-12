@@ -1,11 +1,11 @@
 
 ### Getting Started
 
-* [How to Download data files]({{url_for('download_doc')}})
+* [How to Download data files]({{url_for('render_doc', doc_name='download')}})
 
-* [Globus Personal Connect]({{url_for('globus_personal_connect')}})
+* [Globus Personal Connect]({{url_for('render_doc', doc_name='globus_personal')}})
 
-* [Installing `GCRCatalogs`]({{url_for('install_gcr_doc')}})
+* [Installing `GCRCatalogs`]({{url_for('render_doc', doc_name='install_gcr')}})
 
-* [Accessing data files with `GCRCatalogs`]({{url_for('access_with_gcr_doc')}})
+* [Accessing data files with `GCRCatalogs`]({{url_for('render_doc', doc_name='access_with_gcr')}})
 

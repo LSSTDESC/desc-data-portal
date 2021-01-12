@@ -22,21 +22,27 @@ def home():
 
 
 "DOC routes"
-@app.route('/download_doc', methods=['GET'])
-def download_doc():
-    return render_template('download_doc.jinja2')
+@app.route('/doc/<doc_name>')
+def render_doc(doc_name):
+    return render_template('doc_template.jinja2', doc_name=doc_name)
 
-@app.route('/globus_personal_connect', methods=['GET'])
-def globus_personal_connect():
-    return render_template('globus_personal_connect.jinja2')
 
-@app.route('/install_gcr_doc', methods=['GET'])
-def install_gcr_doc():
-    return render_template('install_gcr_doc.jinja2')
 
-@app.route('/access_with_gcr_doc', methods=['GET'])
-def access_with_gcr_doc():
-    return render_template('access_with_gcr_doc.jinja2')
+#@app.route('/download_doc', methods=['GET'])
+#def download_doc():
+#    return render_template('download_doc.jinja2')
+
+#@app.route('/globus_personal_connect', methods=['GET'])
+#def globus_personal_connect():
+#    return render_template('globus_personal_connect.jinja2')
+
+#@app.route('/install_gcr_doc', methods=['GET'])
+#def install_gcr_doc():
+#    return render_template('install_gcr_doc.jinja2')
+
+#@app.route('/access_with_gcr_doc', methods=['GET'])
+#def access_with_gcr_doc():
+#    return render_template('access_with_gcr_doc.jinja2')
 
 @app.route('/signup', methods=['GET'])
 def signup():

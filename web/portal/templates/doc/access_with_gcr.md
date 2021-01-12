@@ -3,7 +3,7 @@
 
 ### Setting up `root_dir` for GCRCatalogs
 
-After you [downloaded the data files]({{url_for('download_doc')}}) and [installed `GCRCatalogs`]({{url_for('install_gcr_doc')}}),
+After you [downloaded the data files]({{url_for('render_doc', doc_name='download')}}) and [installed `GCRCatalogs`]({{url_for('render_doc', doc_name='install_gcr')}}),
 you need to tell `GCRCatalogs` where these downloaded files sit on your machine. 
 
 When you used Globus transfer, if you downloaded the files to `/path/to/the/download/directory`, then run in a terminal
