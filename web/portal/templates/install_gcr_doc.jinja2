@@ -1,0 +1,21 @@
+{%extends "base.jinja2"%}
+
+{%block title%}
+   Install GCRCatalogs
+{%endblock%}
+
+{%block body%}
+
+  {%include "header.jinja2"%}
+
+<div class="container">
+
+   {% markdown %}
+   {%include "doc/install_gcr.md"%}
+   {% endmarkdown %}
+
+</div> 
+<!-- container -->
+
+{%endblock%}
+

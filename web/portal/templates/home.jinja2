@@ -65,7 +65,6 @@
       <!--Section: Main features & Quick Start-->
       <section>
 
-        <h3 class="h3 text-left mb-5">DESC DC2 Data Release v1</h3>
 
         <!--Grid row-->
         <div class="row wow fadeIn">
@@ -76,17 +75,24 @@
             <!--First row-->
             <div class="row pb-4">
               <div class="col-10">
-                <h5 class="feature-title">Getting Started</h5>
-                <p class="grey-text">Overview and detailed instructions.</p>
+                {% markdown %}
+                {%include "doc/getting_started.md"%}
+                {% endmarkdown %}
               </div>
             </div>
             <!--/First row-->
 
+          </div>
+          <!--/Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 px-4">
             <!--Second row-->
             <div class="row pb-4">
               <div class="col-10">
-                <h5 class="feature-title">Resources</h5>
-                <p class="grey-text">Insert links to DESC Note & DC2 Paper.</p>
+                {% markdown %}
+                {%include "doc/resources.md"%}
+                {% endmarkdown %}
               </div>
             </div>
             <!--/Second row-->
