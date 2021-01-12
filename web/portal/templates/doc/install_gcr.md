@@ -1,4 +1,4 @@
-
+<!--- Do not delete this line, it is needed for jinja_markdown to render this page correctly -->
 # Install GCRCatalogs
 
 You can install [`GCRCatalogs`](https://github.com/LSSTDESC/gcr-catalogs) with [conda](https://docs.conda.io/) or [pip](https://pip.pypa.io/),
