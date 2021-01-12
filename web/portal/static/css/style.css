@@ -489,14 +489,6 @@ body {
   webkit-tap-highlight-color: #4d75a8;
 }
 
-.page-header {
-  margin-top: -30px;
-}
-
-ul {
-  list-style: none;
-}
-
 p.task-detail {
   margin: 10px 0;
 }
