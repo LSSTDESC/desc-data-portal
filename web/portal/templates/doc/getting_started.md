@@ -9,3 +9,7 @@
 
 * [Accessing data files with `GCRCatalogs`]({{url_for('render_doc', doc_name='access_with_gcr')}})
 
+* [Need Help?](https://github.com/LSSTDESC/desc-data-portal/discussions)
+
+
+
