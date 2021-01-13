@@ -8,6 +8,7 @@ body {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 20px;
   color: #404040;
+  webkit-tap-highlight-color: #4d75a8;
 }
 
 p {
@@ -485,10 +486,11 @@ img::-moz-selection {
   background: transparent;
 }
 
-body {
-  webkit-tap-highlight-color: #4d75a8;
-}
-
 p.task-detail {
   margin: 10px 0;
+}
+
+ul.alert {
+  list-style: none;
+  margin-top: 20px;
 }
