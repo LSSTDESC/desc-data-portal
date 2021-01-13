@@ -265,7 +265,7 @@ def browse(dataset_id=None, endpoint_id=None, endpoint_path=None):
     if request.method == 'POST':
         if not request.form.get('file'):
             flash('Please select at least one file.')
-            return redirect(url_for('browse'))
+            return redirect(url_for('browse', dataset_id=dataset_id))
 
         params = {
             'method': 'POST',
