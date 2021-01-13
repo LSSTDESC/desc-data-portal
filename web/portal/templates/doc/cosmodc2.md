@@ -9,12 +9,12 @@ If you use cosmoDC2 in your work, please cite [Korytov et al. (LSST DESC), ApJS,
 
 Follow [these instructions](download) to download "CosmoDC2 v1.1.4" data files.
 You can download the full data set or, if space is at a premium, a recommended subset of files.
-Note that the full catalog is partitioned into sky areas by healpixels and also by redshift ranges. The recommended
+Note that the full catalog is partitioned into sky areas by healpixels and also by redshift ranges.
 
 
 ### Step 2: Prepare `GCRCatalogs`
 
-See these instructions  [these instructions](install_gcr) to install and configure `GCRCatalogs`.
+See [these instructions](install_gcr) to install and configure `GCRCatalogs`.
 
 ### Step 3: Load cosmoDC2 with GCRCatalogs
 
@@ -29,7 +29,7 @@ There are many tutorial notebooks showing you how to use GCRCatalogs and how to 
 Note that if you see the tutorial notebooks load `cosmoDC2_v1.1.4_small` or `cosmoDC2_v1.1.4_image`,
 you will need to change the catalog name to `desc_cosmodc2`.
 
-Note that in some tutorials you may see instructions of loading other catalogs with `GCRCatalogs`. Those instructions will *not* work on your local machine. You will only be able to public DESC catalogs that you have downloaded to your machine.
+Note that in some tutorials you may see instructions of loading other catalogs with `GCRCatalogs`. Those instructions will *not* work on your local machine. You will only be able to access public DESC catalogs that you have downloaded to your machine.
 
 - [Basic usage of `GCRCatalogs`](https://nbviewer.jupyter.org/github/LSSTDESC/gcr-catalogs/blob/master/examples/GCRCatalogs%20Demo.ipynb)
 - [Tutorial: Redshift distributions](https://nbviewer.jupyter.org/github/LSSTDESC/DC2-analysis/blob/rendered/tutorials/extragalactic_gcr_redshift_dist.nbconvert.ipynb)

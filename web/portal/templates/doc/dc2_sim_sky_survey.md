@@ -14,7 +14,7 @@ You can download the full data set or, if space is at a premium, a recommended s
 
 ### Step 2: Prepare `GCRCatalogs`
 
-See these instructions  [these instructions](install_gcr) to install and configure `GCRCatalogs`.
+See [these instructions](install_gcr) to install and configure `GCRCatalogs`.
 
 ### Step 3: Verify access to the data
 
