@@ -12,7 +12,7 @@
         <div class="site-heading">
           <h1>LSSTDESC Data Portal</h1>
           <hr class="small">
-          <span class="subheading">Dark Energy Science Collaboration Public Data Access</span>
+          <span class="subheading">LSST Dark Energy Science Collaboration Public Data Access</span>
         </div>
       </div>
     </div>
@@ -23,40 +23,34 @@
 <main>
    <div class="container">
       <!--Section: Main info-->
-  <!--    <section class="mt-5 wow fadeIn"> -->
+      <section>
 
         <!--Grid row-->
         <div class="row">
 
           <!--Grid column-->
-          <div class="col-md-6 mb-4 px-4">
-
-  <!--          <img src="{{url_for('static',filename='img/logo.png') }}" class="img-fluid" alt="DESC Logo" width="553" height="370"> -->
-            <img src="{{url_for('static',filename='img/logo.png') }}" class="img-fluid" alt="DESC Logo" width="277" height="185">
-
+          <div class="col-sm-3 mb-4 px-4">
+            <p><img src="{{url_for('static',filename='img/logo.png') }}" class="img-fluid" alt="DESC Logo" width="100%"></p>
           </div>
           <!--Grid column-->
 
           <!--Grid column-->
-          <div class="col-md-6 mb-4 px-4">
-
-            <!-- Main heading -->
-            <!-- <h3 class="h3 mb-3">Dark Energy Science Collaboration</h3> -->
-	    <p>Welcome to the LSSTDESC Data Portal.</p>
+          <div class="col-sm-9 mb-4 px-4">
+      	    <p>Welcome to the <a href="https://lsstdesc.org">LSST DESC</a> Data Portal</p>
             {%if session.get('is_authenticated')%}
-            <p>Now that you are logged into Globus, click the Transfer menu item above to browse and download data.</p>
-            <p>If you have questions, please see the "Getting Started" section below.</p>
+            <p>You have logged into Globus. You can click <a href="{{url_for('transfer')}}">Transfer</a> in the top menu to browse and download data.</p>
+            <p>See the "Getting Started" section below for detailed instructions.</p>
             {%else%}
-            <p>If you are new to Globus or have questions, please see the "Getting Started" section below. Otherwise, to download datasets, click Login above to authenticate into Globus using your organizational login or existing GlobusID. If needed, create a <a href="https://www.globusid.org/what" target="_blank">GlobusID</a> using the "Sign Up" link.</p>
+            <p>If you are new to Globus or have questions, please see the "Getting Started" section below.
+            Otherwise, to download datasets, click <a href="{{url_for('login')}}">Login</a> above to authenticate into Globus using your organizational login or existing GlobusID. If needed, create a <a href="https://www.globusid.org/what" target="_blank">GlobusID</a> using the "Sign Up" link.</p>
             {%endif%}
-
           </div>
           <!--Grid column-->
 
         </div>
         <!--Grid row-->
 
-     <!-- </section> -->
+      </section>
       <!--Section: Main info-->
 
 
@@ -72,32 +66,17 @@
 
           <!--Grid column-->
           <div class="col-lg-6 col-md-12 px-4">
-
-            <!--First row-->
-            <div class="row pb-4">
-              <div class="col-10">
-                {% markdown %}
-                {% include "doc/getting_started.md" %}
-                {% endmarkdown %}
-              </div>
-            </div>
-            <!--/First row-->
-
+            {% markdown %}
+            {% include "doc/overview.md" %}
+            {% endmarkdown %}
           </div>
           <!--/Grid column-->
 
           <!--Grid column-->
           <div class="col-lg-6 col-md-12 px-4">
-            <!--Second row-->
-            <div class="row pb-4">
-              <div class="col-10">
-                {% markdown %}
-                {% include "doc/resources.md" %}
-                {% endmarkdown %}
-              </div>
-            </div>
-            <!--/Second row-->
-
+            {% markdown %}
+            {% include "doc/getting_started.md" %}
+            {% endmarkdown %}
           </div>
           <!--/Grid column-->
 
@@ -112,13 +91,13 @@
 
 
     <!--Section: acknowledgements -->
-  <!--  <section> -->
+    <section>
       <div class="col-12">
         <p class="grey-text small text-center pb-4">
           DESC acknowledges ongoing support from the US Department of Energy, IN2P3 (France), the STFC (United Kingdom), and the NSF and LSST Corporation (United States).
         </p>
       </div>
-    <!-- </section> -->
+    </section>
 
   </div>
   <!--Container-->
