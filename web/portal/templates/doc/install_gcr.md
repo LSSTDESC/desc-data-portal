@@ -77,3 +77,24 @@ If you have moved it, you should change `/path/to/the/download/directory` to the
 Do not change the directory structure within `lsstdesc-public`.
 
 You only need to set this once.
+
+### Checking that everything is ready
+
+You can use the following Python code to check if you have `GCRCatalogs` installed and `root_dir` correctly set.
+
+```python
+import GCRCatalogs
+GCRCatalogs.get_root_dir()
+```
+
+To see the list of public catalogs that may be available to you, run:
+
+```python
+GCRCatalogs.get_public_catalog_names()
+```
+
+Note that the above function returns the list of public catalogs that DESC has published,
+but it does not check if those catalog files exist on your machine.
+You will need to download them manually following [these instructions](download).
+
+To confirm that GCRCatalogs has access to the files you've downloaded see the specific instructions for either [cosmoDC2](cosmodc2) or the [DC2 Simulated Sky Survey](dc2_sim_sky_survey).
