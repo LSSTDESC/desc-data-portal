@@ -32,13 +32,13 @@
 
   </p>
   <p class="grey-text small text-center pb-4">
-    Choose the files you wish to download and click the Transfer button at the bottom of the page <strong>or</strong>
-  <a href="{{url_for('example', dataset_id=myid)}}" class="btn btn-info btn-sm">Get an {{exsize}} Example Subset</a>
+    Choose the files you wish to download and click the Transfer button at the bottom of the page.
   </p>
 
   <p>
   <button class="btn btn-info btn-sm" id="select-all">Select all</button>
   <button class="btn btn-info btn-sm" id="unselect-all">Unselect all</button>
+  <button class="btn btn-info btn-sm" id="select-example">Select the Example Subset ({{exsize}})</button>
   </p>
 
     <div class="form-wrapper">
@@ -67,7 +67,7 @@
                     </td>
                     <td class="col-md-1 text-right">{{file.size|filesizeformat}}</td>
                     <td class="col-md-1 text-center">
-                      <input type="checkbox" name="file" value="{{file.name}}">
+                      <input type="checkbox" name="file" value="{{file.name}}" data-is-example="{{file.is_example_set}}">
                       <input type="hidden" name="path" value="{{mypath}}">
                       <input type="hidden" name="id" value="{{myid}}">
                     </td>
@@ -104,16 +104,18 @@
 </div> <!-- container -->
 
 <script>
-
 $( document ).ready(function() {
   $( "#select-all" ).click(function() {
     $( "input:checkbox[name='file']" ).prop( "checked", true );
-  }
+  });
   $( "#unselect-all" ).click(function() {
     $( "input:checkbox[name='file']" ).prop( "checked", false );
-  }
+  });
+  $( "#select-example" ).click(function() {
+    $( "#unselect-all" ).click();
+    $( "input:checkbox[name='file'][data-is-example='true']" ).prop( "checked", true );
+  });
 });
-
 </script>
 
 {%endblock%}

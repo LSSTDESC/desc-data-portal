@@ -241,6 +241,9 @@ def browse(dataset_id=None, endpoint_id=None, endpoint_path=None):
             return redirect(url_for('browse'))
 
         file_list = [e for e in listing if e['type'] == 'file']
+        if dataset_id:
+            for e in file_list:
+                e['is_example_set'] = (e['name'] in dataset['example'])
 
         ep = transfer.get_endpoint(endpoint_id)
 
@@ -317,7 +320,7 @@ def example(dataset_id=None):
             'dirselect': False,
             'datasets': dataset['example'],
             'path': requested_path,
-            'id': requested_id 
+            'id': requested_id
         }
 
         return redirect(browse_endpoint)
@@ -396,7 +399,7 @@ def submit_transfer():
     source_endpoint_id = app.config['DATASET_ENDPOINT_ID']
     source_endpoint_base = app.config['DATASET_ENDPOINT_BASE']
     destination_endpoint_id = browse_endpoint_form['endpoint_id']
-    destination_folder = browse_endpoint_form.get('folder[0]') 
+    destination_folder = browse_endpoint_form.get('folder[0]')
 
     transfer_data = TransferData(transfer_client=transfer,
                                  source_endpoint=source_endpoint_id,
