@@ -1,27 +1,53 @@
 <!--- Do not delete this line, it is needed for jinja_markdown to render this page correctly -->
-# Install and Configure `GCRCatalogs`
+## Install and Configure `GCRCatalogs`
 
 You can install [`GCRCatalogs`](https://github.com/LSSTDESC/gcr-catalogs) with [conda](https://docs.conda.io/) or [pip](https://pip.pypa.io/),
 depending on your local Python environment.
 
 ### Install with conda
 
-You may want to create a new conda environment before installation.
-If you do, [see instructions here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
+Before installation, you may want to create a new conda environment.
+If you do,
+[see instructions here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
 
-To install, simply run
+`GCRCatalogs` is available on [conda-forge](https://conda-forge.org/).
+To check if you are ready to obtain packages from conda-forge,
+run the following command and see if "conda-forge" appears in the output.
 
+```bash
+conda config --show channels
+```
+
+If you do _not_ see "conda-forge", you can add it by running:
+
+```bash
+conda config --add channels conda-forge
+conda config --set channel_priority strict
+```
+
+To install `GCRCatalogs` with conda, run
+
+<!-- Remove "-c conda-forge/label/lsstdesc-gcr-catalogs_rc" from below when v1.2.0 is ready -->
 ```bash
 conda install lsstdesc-gcr-catalogs -c conda-forge/label/lsstdesc-gcr-catalogs_rc
 ```
 
 ### Install with pip
 
-You may want to create a virtual environment before installation.
-If you do, [see instructions here](https://docs.python.org/3/library/venv.html).
+Before installation, you may want to create a new virtual environment.
+If you do,
+[see instructions here](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment).
 
-To install, simply run
+Before installing `GCRCatalogs` with pip, you may want to first install `wheel`.
+This will allow pip to fetch pre-built binary files. To install `wheel`, run
 
+```bash
+pip install wheel  # optional
+```
+
+To install `GCRCatalogs` with pip, run
+
+<!-- Change "v1.2.0rc2" to "v1.2.0" below when v1.2.0 is ready -->
 ```bash
 pip install https://github.com/LSSTDESC/gcr-catalogs/archive/v1.2.0rc2.tar.gz#egg=GCRCatalogs[full]
 ```
