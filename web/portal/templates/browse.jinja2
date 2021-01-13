@@ -33,9 +33,13 @@
   </p>
   <p class="grey-text small text-center pb-4">
     Choose the files you wish to download and click the Transfer button at the bottom of the page <strong>or</strong>
-  <a href="{{url_for('example', dataset_id=myid)}}" class="btn btn-info btn-sm">Get an {{exsize}} Example Subset</a>  
+  <a href="{{url_for('example', dataset_id=myid)}}" class="btn btn-info btn-sm">Get an {{exsize}} Example Subset</a>
   </p>
 
+  <p>
+  <button class="btn btn-info btn-sm" id="select-all">Select all</button>
+  <button class="btn btn-info btn-sm" id="unselect-all">Unselect all</button>
+  </p>
 
     <div class="form-wrapper">
       <form class="form-inline" role="form" action="{{url_for('browse', dataset_id=myid)}}" method="post">
@@ -98,5 +102,18 @@
 
 
 </div> <!-- container -->
+
+<script>
+
+$( document ).ready(function() {
+  $( "#select-all" ).click(function() {
+    $( "input:checkbox[name='file']" ).prop( "checked", true );
+  }
+  $( "#unselect-all" ).click(function() {
+    $( "input:checkbox[name='file']" ).prop( "checked", false );
+  }
+});
+
+</script>
 
 {%endblock%}
