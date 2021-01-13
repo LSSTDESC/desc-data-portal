@@ -1,7 +1,7 @@
 
 ### Getting Started
 
-Start by downloading data files from the Portal. Note that the complete dataset is about 180 Gbytes; you may want to start with a subset. We recommend the sample subset required by the tutorial notebooks. At this point you may access the files directly using standard Parquet tools.
+Start by downloading data files from the Portal. Note that the complete DC2 dataset (Object and Truth Match) is about 180 Gbytes; you may want to start with a subset. We recommend the sample subset required by the tutorial notebooks. At this point you may access the files directly using standard Parquet tools.
 
 Alternatively, for a higher-level interface, you may install and configure the Python package GCRCatalogs.
 
