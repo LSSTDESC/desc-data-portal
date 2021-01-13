@@ -6,7 +6,7 @@
 * [Download data files]({{url_for('render_doc', doc_name='download')}})
 * [Set up Globus Personal Connect]({{url_for('render_doc', doc_name='globus_personal')}})
 * [Install and configure `GCRCatalogs`]({{url_for('render_doc', doc_name='install_gcr')}})
-* [How to acknowledge] ({{url_for('render_doc', doc_name='how_to_acknowledge')}})
+* [How to acknowledge]({{url_for('render_doc', doc_name='how_to_acknowledge')}})
 
 
 #### Instructions Specific to Data Set
