@@ -12,28 +12,13 @@ Before installation, you may want to create a new conda environment.
 If you do,
 [see instructions here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
 
-`GCRCatalogs` is available on [conda-forge](https://conda-forge.org/).
-To check if you are ready to obtain packages from conda-forge,
-run the following command and see if "conda-forge" appears in the output.
-
-```bash
-conda config --show channels
-```
-
-If you do _not_ see "conda-forge", you can add it by running:
-
-```bash
-conda config --add channels conda-forge
-conda config --set channel_priority strict
-```
-
 #### Install
 
+`GCRCatalogs` is available on [conda-forge](https://conda-forge.org/).
 To install `GCRCatalogs` with conda, run
 
-<!-- Remove "-c conda-forge/label/lsstdesc-gcr-catalogs_rc" from below when v1.2.0 is ready -->
 ```bash
-conda install lsstdesc-gcr-catalogs -c conda-forge/label/lsstdesc-gcr-catalogs_rc
+conda install -c conda-forge lsstdesc-gcr-catalogs
 ```
 
 ### Install with pip
@@ -44,8 +29,8 @@ Before installation, you may want to create a new virtual environment.
 If you do,
 [see instructions here](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment).
 
-You may want to first install `wheel`, 
-which will allow pip to fetch pre-built binary files. 
+You may want to first install `wheel`,
+which will allow pip to fetch pre-built binary files.
 To install `wheel`, run
 
 ```bash
@@ -56,9 +41,8 @@ pip install wheel  # optional
 
 To install `GCRCatalogs` with pip, run
 
-<!-- Change "v1.2.0rc2" to "v1.2.0" below when v1.2.0 is ready -->
 ```bash
-pip install https://github.com/LSSTDESC/gcr-catalogs/archive/v1.2.0rc2.tar.gz#egg=GCRCatalogs[full]
+pip install https://github.com/LSSTDESC/gcr-catalogs/archive/v1.2.0.tar.gz#egg=GCRCatalogs[full]
 ```
 
 ### Configure: Setting up `root_dir` for GCRCatalogs
