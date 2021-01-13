@@ -38,7 +38,7 @@
           <div class="col-sm-9 mb-4 px-4">
       	    <p>Welcome to the <a href="https://lsstdesc.org">LSST DESC</a> Data Portal</p>
             {%if session.get('is_authenticated')%}
-            <p>You have logged into Globus. You can click <a href="{{url_for('transfer')}}">Transfer</a> in the top menu to browse and download data.</p>
+            <p>You have logged into Globus. You may click <a href="{{url_for('transfer')}}">Transfer</a> in the top menu to browse and download data.</p>
             <p>See the "Getting Started" section below for detailed instructions.</p>
             {%else%}
             <p>If you are new to Globus or have questions, please see the "Getting Started" section below.
