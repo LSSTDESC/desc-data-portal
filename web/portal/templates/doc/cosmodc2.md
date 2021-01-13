@@ -8,16 +8,13 @@ If you use cosmoDC2 in your work, please cite [Korytov et al. (LSST DESC), ApJS,
 ### Step 1: Download cosmoDC2 catalog files
 
 Follow [these instructions](download) to download "CosmoDC2 v1.1.4" data files.
-You can download the full data set and a subset of files.
-Note that the full catalog is partitioned into sky areas by healpixels and also by redshift ranges.
+You can download the full data set or, if space is at a premium, a recommended subset of files.
+Note that the full catalog is partitioned into sky areas by healpixels and also by redshift ranges. The recommended
 
 
 ### Step 2: Prepare `GCRCatalogs`
 
-To help you access the cosmoDC2 data, the LSST DESC has developed the `GCRCatalogs` Pyhton package. While there are detailed instructions and tutorials available or linked from the [GitHub repository of `GCRCatalogs`](https://github.com/LSSTDESC/gcr-catalogs), they generally assume that the user is a DESC member and is running the code on NERSC. Nevertheless, some simple customization can enable you to use  `GCRCatalogs` to access cosmoDC2 on your local machine.
-
-Follow [these instructions](install_gcr) to install `GCRCatalogs`.
-
+See these instructions  [these instructions](install_gcr) to install and configure `GCRCatalogs`.
 
 ### Step 3: Load cosmoDC2 with GCRCatalogs
 
