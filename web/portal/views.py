@@ -21,7 +21,6 @@ def home():
     return render_template('home.jinja2')
 
 
-"DOC routes"
 @app.route('/doc/<doc_name>')
 def render_doc(doc_name):
     return render_template('doc_template.jinja2', doc_name=doc_name)
@@ -260,6 +259,8 @@ def browse(dataset_id=None, endpoint_id=None, endpoint_path=None):
                                         else None),
                            myid=(dataset['id'] if dataset_id
                                         else None),
+                           exsize=(dataset['exsize'] if dataset_id
+                                        else None),
                            file_list=file_list, webapp_xfer=webapp_xfer)
 
     if request.method == 'POST':
@@ -286,6 +287,42 @@ def browse(dataset_id=None, endpoint_id=None, endpoint_path=None):
         }
 
         return redirect(browse_endpoint)
+
+
+@app.route('/example/dataset_id/<dataset_id>', methods=['GET'])
+@authenticated
+def example(dataset_id=None):
+    if request.method == 'GET':
+
+        if dataset_id:
+            try:
+                dataset = next(ds for ds in datasets if ds['id'] == dataset_id)
+                requested_path = [dataset['path']] * len(dataset['example'])
+                requested_id = [dataset['id']] * len(dataset['example'])
+            except StopIteration:
+                abort(404)
+
+        params = {
+            'method': 'POST',
+            'action': url_for('submit_transfer', _external=True,
+                              _scheme='https'),
+            'filelimit': 0,
+            'folderlimit': 1
+        }
+
+        browse_endpoint = 'https://app.globus.org/file-manager?{}' \
+            .format(urlencode(params))
+
+        session['form'] = {
+            'dirselect': False,
+            'datasets': dataset['example'],
+            'path': requested_path,
+            'id': requested_id 
+        }
+
+        return redirect(browse_endpoint)
+
+
 
 
 
