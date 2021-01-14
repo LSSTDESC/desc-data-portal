@@ -12,9 +12,15 @@ Before installation, you may want to create a new conda environment.
 If you do,
 [see instructions here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
 
+`GCRCatalogs` is available on [conda-forge](https://conda-forge.org/), not on conda's "defaults" channel. 
+If you are using the "defaults" channel (for example, if you haven't heard of conda-forge),
+you can still install `GCRCatalogs` directly using the instruction below.
+However, please consider switching to the conda-forge channel; 
+see [instructions](https://conda-forge.org/docs/user/introduction.html#how-can-i-install-packages-from-conda-forge) 
+and [why](https://conda-forge.org/docs/user/tipsandtricks.html#using-multiple-channels).
+
 #### Install
 
-`GCRCatalogs` is available on [conda-forge](https://conda-forge.org/).
 To install `GCRCatalogs` with conda, run
 
 ```bash
