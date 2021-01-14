@@ -1,4 +1,3 @@
-<!--- Do not delete this line, it is needed for jinja_markdown to render this page correctly -->
 ## DC2 Simulated Sky Survey
 
 The DC2 Simulated Sky Survey is a 300-sq-deq simulated survey
