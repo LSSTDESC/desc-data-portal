@@ -241,7 +241,7 @@ def browse(dataset_id=None, endpoint_id=None, endpoint_path=None):
             return redirect(url_for('browse'))
 
         file_list = [e for e in listing if e['type'] == 'file']
-        if dataset_id:
+        if dataset_id and 'example' in dataset:
             for e in file_list:
                 e['is_example_set'] = (e['name'] in dataset['example'])
 
@@ -260,6 +260,7 @@ def browse(dataset_id=None, endpoint_id=None, endpoint_path=None):
                                         else None),
                            myid=(dataset['id'] if dataset_id
                                         else None),
+                           has_example_set=(dataset_id and 'example' in dataset),
                            file_list=file_list, webapp_xfer=webapp_xfer)
 
     if request.method == 'POST':
