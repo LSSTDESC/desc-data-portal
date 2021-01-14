@@ -16,6 +16,9 @@
       <strong>or</strong>
       click on a dataset name to browse and choose individual files for transfer.
     </p>
+    <p>
+      To learn more about a dateset, click the "doc" link next to the dataset name.
+    </p>
 
     <div class="form-wrapper">
       <form class="form-inline" role="form" action="{{url_for('transfer')}}" method="post">
@@ -38,6 +41,9 @@
                       <a href="{{url_for('browse', dataset_id=dataset['id'])}}">
                         {{dataset["name"]}}
                       </a>
+                      {%if dataset['doc_name']%}
+                      (<a href="{{url_for('render_doc', doc_name=dataset['doc_name'])}}">doc</a>)
+                      {%endif%}
                     </td>
                     <td class="col-md-1 text-right">{{dataset['size']}}</td>
                     <td class="col-md-1 text-center">
