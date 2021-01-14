@@ -25,16 +25,13 @@
       <form class="form-inline" role="form" action="{{url_for('browse', dataset_id=myid)}}" method="post">
 
         <div class="row">
-          <div class="col-md-9">
-            <button type="button" class="btn btn-info btn-sm" id="select-all">Select all</button>
-            <button type="button" class="btn btn-info btn-sm" id="unselect-all">Unselect all</button>
+          <div class="col-md-12">
+            <button type="button" class="btn btn-info block-left" id="select-all">Select all</button>
+            <button type="button" class="btn btn-info block-left" id="unselect-all">Unselect all</button>
             {%if has_example_set%}
-            <button type="button" class="btn btn-info btn-sm" id="select-example">Select Example Subset</button>
+            <button type="button" class="btn btn-info block-left" id="select-example">Select Example Subset</button>
             {%endif%}
-          </div>
-          <div class="form-actions col-md-3 pull-right">
-            <input name="browse" type="submit" class="btn btn-primary"
-                   value="Transfer">
+            <input name="browse" type="submit" class="btn btn-primary block-right" value="Transfer">
           </div>
         </div>
 
@@ -79,9 +76,8 @@
         <hr>
 
         <div class="row">
-          <div class="form-actions col-md-7 pull-right">
-            <input name="browse" type="submit" class="btn btn-primary"
-                   value="Transfer">
+          <div class="col-md-12">
+            <input name="browse" type="submit" class="btn btn-primary block-center" value="Transfer">
           </div>
         </div>
         <div class="row">

@@ -511,3 +511,20 @@ ul.alert {
 div.home-ack{
   margin-bottom: -70px;
 }
+
+.block-left, .block-right, .block-center{
+  display: block;
+  margin: 8px auto;
+}
+
+@media only screen and (min-width: 576px) {
+  .block-left {
+    float: left;
+    margin: 8px 8px 8px 0;
+  }
+
+  .block-right {
+    float: right;
+    margin: 8px 0 8px 8px;
+  }
+}
