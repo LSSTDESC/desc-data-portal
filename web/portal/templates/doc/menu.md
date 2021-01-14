@@ -10,7 +10,7 @@
 #### Instructions and Notebooks Specific to Data Set
 
 * [DC2 Simulated Sky Survey]({{url_for('render_doc', doc_name='dc2_sim_sky_survey')}})
-* [cosmoDC2]({{url_for('render_doc', doc_name='cosmodc2')}})
+* [CosmoDC2]({{url_for('render_doc', doc_name='cosmodc2')}})
 
 #### Need Help?
 
