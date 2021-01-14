@@ -44,8 +44,8 @@ Before installation, you may want to create a new virtual environment.
 If you do,
 [see instructions here](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment).
 
-You may want to first install `wheel`, 
-which will allow pip to fetch pre-built binary files. 
+You may want to first install `wheel`,
+which will allow pip to fetch pre-built binary files.
 To install `wheel`, run
 
 ```bash
@@ -63,7 +63,7 @@ pip install https://github.com/LSSTDESC/gcr-catalogs/archive/v1.2.0rc2.tar.gz#eg
 
 ### Configure: Setting up `root_dir` for GCRCatalogs
 
-After you [downloaded the data files]({{url_for('render_doc', doc_name='download')}}) and [installed `GCRCatalogs`]({{url_for('render_doc', doc_name='install_gcr')}}),
+After you [download the data files]({{url_for('render_doc', doc_name='download')}}) and [install `GCRCatalogs`]({{url_for('render_doc', doc_name='install_gcr')}}),
 you need to tell `GCRCatalogs` where these downloaded files sit on your machine.
 
 When you used Globus transfer, if you downloaded the files to `/path/to/the/download/directory`, then run in a terminal

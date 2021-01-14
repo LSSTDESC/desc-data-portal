@@ -29,7 +29,7 @@ There are many tutorial notebooks showing you how to use GCRCatalogs and how to 
 Note that if you see the tutorial notebooks load `cosmoDC2_v1.1.4_small` or `cosmoDC2_v1.1.4_image`,
 you will need to change the catalog name to `desc_cosmodc2`.
 
-Note that in some tutorials you may see instructions of loading other catalogs with `GCRCatalogs`. Those instructions will *not* work on your local machine. You will only be able to access public DESC catalogs that you have downloaded to your machine.
+Note that in some tutorials you may see instructions for loading other catalogs with `GCRCatalogs`. Those instructions will *not* work on your local machine. You will only be able to access public DESC catalogs that you have downloaded to your machine.
 
 - [Basic usage of `GCRCatalogs`](https://nbviewer.jupyter.org/github/LSSTDESC/gcr-catalogs/blob/master/examples/GCRCatalogs%20Demo.ipynb)
 - [Tutorial: Redshift distributions](https://nbviewer.jupyter.org/github/LSSTDESC/DC2-analysis/blob/rendered/tutorials/extragalactic_gcr_redshift_dist.nbconvert.ipynb)

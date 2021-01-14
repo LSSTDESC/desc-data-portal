@@ -1,7 +1,7 @@
 <!--- Do not delete this line, it is needed for jinja_markdown to render this page correctly -->
 ## How To Download Data
 
-The [LSSTDESC Data Portal](https://lsstdesc-portal.nersc.gov/) allows anyone to transfer the DC2 Public Release data using Globus.   
+The [LSSTDESC Data Portal](https://lsstdesc-portal.nersc.gov/) allows anyone to transfer the DC2 Public Release data using Globus.
 
 To get started click Login to authenticate into Globus using your organizational login or existing GlobusID. If needed, create a GlobusID using the "Sign Up" link.
 
@@ -18,7 +18,7 @@ If you would prefer to download individual files, click on one of the Datasets a
 
 ![File Selection](/static/img/fileselect.png)
 
-Choose your files, and then click Transfer.  In either case, when clicking Transfer, you be taken to a Globus page where you will choose the destination for your download.
+Choose your files, and then click Transfer.  In either case, when clicking Transfer, you will be taken to a Globus page where you will choose the destination for your download.
 
 ![Globus](/static/img/globus.png)
 
