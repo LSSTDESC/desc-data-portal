@@ -101,11 +101,18 @@ $( document ).ready(function() {
 
   function calc_total_size(){
     var total = 0;
+    var count = 0;
+    var plural = "s";
     $( "input:checkbox[name='file']:checked" ).each(function() {
         total += Number($(this).prop("data-filesize"));
+        count += 1;
     });
+    if (count == 1){
+      plural = "";
+    }
     total = total / 1000000000;
-    $( "input[type='submit'][name='browse']" ).val("Transfer (" +  total + " GB)");
+    var text = "Transfer (" +  count + " file" + plural + "; " + total + " GB)";
+    $( "input[type='submit'][name='browse']" ).val(text);
   }
 
   $( "#select-all" ).click(function() {
