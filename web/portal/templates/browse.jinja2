@@ -99,23 +99,22 @@
 </div> <!-- container -->
 
 <script>
-$( document ).ready(function() {
 
-  function calc_total_size(){
-    var total = 0;
-    var count = 0;
-    var plural = "s";
-    $( "input:checkbox[name='file']:checked" ).each(function() {
-        total += Number($(this).prop("data-filesize"));
-        count += 1;
-    });
-    if (count == 1){
-      plural = "";
-    }
-    total = total / 1000000000;
-    var text = "Transfer (" +  count + " file" + plural + "; " + total + " GB)";
-    $( "input[type='submit'][name='browse']" ).val(text);
-  }
+function calc_total_size(){
+  var total = 0;
+  var count = 0;
+  var plural = "s";
+  $( "input:checkbox[name='file']:checked" ).each(function() {
+      total += Number($(this).attr("data-filesize"));
+      count += 1;
+  });
+  if (count == 1) plural = "";
+  total = total / 1000000000;
+  var text = "Transfer (" +  count + " file" + plural + "; " + total + " GB)";
+  $( "input[type='submit'][name='browse']" ).val(text);
+}
+
+$( document ).ready(function() {
 
   $( "#select-all" ).click(function(event) {
     event.preventDefault();
