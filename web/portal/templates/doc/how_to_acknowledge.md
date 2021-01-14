@@ -1,6 +1,5 @@
 
-## References
-
+## How to Acknowledge
 
 ### DC2 Simulated Sky Survey
 
@@ -8,7 +7,7 @@ If you use a DESC DC2 Simulated Sky Survey data product in a publication,
 we ask that you cite the following publications.
 
 * [DESC DC2 Simulated Sky Survey Paper](https://ui.adsabs.harvard.edu/abs/2020arXiv201005926L/abstract)
-* [DESC DC2 Data Release Note](https://arxiv.org/abs/2101.00000)
+* [DESC DC2 Data Release Note](https://arxiv.org/abs/2101.XXXXX)
 
 ### CosmoDC2
 

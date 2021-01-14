@@ -4,7 +4,7 @@
 If you use the DC2 Simulated Sky Survey in your work, we ask that you cite the following publications.
 
 * [DESC DC2 Simulated Sky Survey Paper](https://ui.adsabs.harvard.edu/abs/2020arXiv201005926L/abstract)
-* [DESC DC2 Data Release Note](https://arxiv.org/abs/2101.00000)
+* [DESC DC2 Data Release Note](https://arxiv.org/abs/2101.XXXXX)
 
 In addition, if you use `GCRCatalogs` to access the data, please also cite [Mao et al. (LSST DESC), ApJS, 234, 36 (2018)](https://ui.adsabs.harvard.edu/abs/2018ApJS..234...36M/abstract).
 
