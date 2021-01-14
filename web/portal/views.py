@@ -261,6 +261,7 @@ def browse(dataset_id=None, endpoint_id=None, endpoint_path=None):
                            myid=(dataset['id'] if dataset_id
                                         else None),
                            has_example_set=(dataset_id and 'example' in dataset),
+                           doc_name=(dataset.get("doc_name") if dataset_id else None),
                            file_list=file_list, webapp_xfer=webapp_xfer)
 
     if request.method == 'POST':
