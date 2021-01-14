@@ -1,4 +1,3 @@
-<!--- Do not delete this line, it is needed for jinja_markdown to render this page correctly -->
 ## How To Download Data
 
 The [LSSTDESC Data Portal](https://lsstdesc-portal.nersc.gov/) allows anyone to transfer the DC2 Public Release data using Globus.
