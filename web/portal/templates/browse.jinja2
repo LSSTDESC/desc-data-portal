@@ -109,8 +109,27 @@ function calc_total_size(){
       count += 1;
   });
   if (count == 1) plural = "";
-  total = total / 1000000000;
-  var text = "Transfer (" +  count + " file" + plural + "; " + total + " GB)";
+  var unit;
+  if (total < 1000){
+      unit = "B";
+  }
+  else if (total < 1000000){
+      total /= 1000;
+      unit = "KB";
+  }
+  else if (total < 1000000000){
+      total /= 1000000;
+      unit = "MB";
+  }
+  else if (total < 1000000000000){
+      total /= 1000000000;
+      unit = "GB";
+  }
+  else{
+      total /= 1000000000000;
+      unit = "TB";
+  }
+  var text = "Transfer (" +  count + " file" + plural + "; " + total.toFixed(1) + " " + unit + ")";
   $( "input[type='submit'][name='browse']" ).val(text);
 }
 
