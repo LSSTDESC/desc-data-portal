@@ -117,17 +117,20 @@ $( document ).ready(function() {
     $( "input[type='submit'][name='browse']" ).val(text);
   }
 
-  $( "#select-all" ).click(function() {
+  $( "#select-all" ).click(function(event) {
+    event.preventDefault();
     $( "input:checkbox[name='file']" ).prop( "checked", true );
     calc_total_size();
   });
 
-  $( "#unselect-all" ).click(function() {
+  $( "#unselect-all" ).click(function(event) {
+    event.preventDefault();
     $( "input:checkbox[name='file']" ).prop( "checked", false );
     calc_total_size();
   });
 
-  $( "#select-example" ).click(function() {
+  $( "#select-example" ).click(function(event) {
+    event.preventDefault();
     $( "#unselect-all" ).click();
     $( "input:checkbox[name='file'][data-is-example='True']" ).prop( "checked", true );
     calc_total_size();
