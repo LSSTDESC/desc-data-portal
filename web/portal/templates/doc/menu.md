@@ -9,7 +9,7 @@
 * [How to acknowledge]({{url_for('render_doc', doc_name='how_to_acknowledge')}})
 
 
-#### Instructions Specific to Data Set
+#### Instructions and Notebooks Specific to Data Set
 
 * [DC2 Simulated Sky Survey]({{url_for('render_doc', doc_name='dc2_sim_sky_survey')}})
 * [cosmoDC2]({{url_for('render_doc', doc_name='cosmodc2')}})
