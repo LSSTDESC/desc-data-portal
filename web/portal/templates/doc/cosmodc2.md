@@ -8,6 +8,7 @@ To learn more about cosmoDC2, please see
 
 - [Korytov et al. (LSST DESC), ApJS, 245, 26 (2019)](https://ui.adsabs.harvard.edu/abs/2019ApJS..245...26K/abstract).
 
+Follow the steps below to access cosmoDC2.
 If you use cosmoDC2 in your work, we ask that you cite the publication above.
 
 ### Step 1: Download cosmoDC2 catalog files

@@ -11,6 +11,7 @@ To learn more about the DC2 Simulated Sky Survey, you can read:
 * [DESC DC2 Data Release Note](https://arxiv.org/abs/2101.04855):
   a brief note about the released dataset, including data file format, data partition scheme, and schema tables.
 
+Follow the steps below to access DC2 Simulated Sky Survey.
 If you use the DC2 Simulated Sky Survey in your work, we ask that you cite both publications above.
 
 ### Step 1: Download the catalog files
