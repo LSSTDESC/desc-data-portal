@@ -5,7 +5,7 @@ The [LSSTDESC Data Portal](https://lsstdesc-portal.nersc.gov/) allows anyone to 
 
 To get started click Login to authenticate into Globus using your organizational login or existing GlobusID. If needed, create a GlobusID using the "Sign Up" link.
 
-If you want to download files to a local machine (e.g., your laptop), you will need to set up Globus Personal Connect on your local machine first.
+If you want to download files to a local machine (e.g., your laptop), you will need to set up [Globus Personal Connect]({{url_for('render_doc', doc_name='globus_personal')}}) on your local machine first.
 
 Once authenticated with Globus, users may transfer either whole directories or individual files by clicking on Transfer from the Home page.  You will be brought to a page like:
 
@@ -18,7 +18,7 @@ If you would prefer to download individual files, click on one of the Datasets a
 
 ![File Selection](/static/img/fileselect.png)
 
-Choose your files, and then click Transfer.  In either case, when clicking Transfer, you will be taken to a Globus page where you will choose the destination for your download.
+Choose your files, and then click Transfer. You may optionally choose a predefined subset of the dataset by clicking the "Select Example Subset" button.  When finished choosing your files, click Transfer, and you will be taken to a Globus page where you will choose the destination for your download.
 
 ![Globus](/static/img/globus.png)
 
