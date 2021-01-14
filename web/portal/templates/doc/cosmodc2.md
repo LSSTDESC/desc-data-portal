@@ -1,4 +1,3 @@
-<!--- Do not delete this line, it is needed for jinja_markdown to render this page correctly -->
 ## CosmoDC2
 
 CosmoDC2 is a large synthetic galaxy catalog designed to support precision dark energy science with LSST,

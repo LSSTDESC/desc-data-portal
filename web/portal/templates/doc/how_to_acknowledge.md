@@ -1,4 +1,3 @@
-
 ## How to Acknowledge
 
 ### DC2 Simulated Sky Survey

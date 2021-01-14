@@ -6,19 +6,19 @@
 
 <div class="container">
 
-<div class="row">
-<div class="col-md-3">
+  <div class="row">
+    <div class="col-md-3">
+<!-- indentation for markdown removed below to make sure markdown display correctly -->
 {% markdown %}
 {%- include "doc/menu.md" -%}
 {% endmarkdown %}
-</div>
-
-<div class="col-md-9">
+    </div>
+    <div class="col-md-9">
 {% markdown %}
 {%- include "doc/" + doc_name + ".md" -%}
 {% endmarkdown %}
-</div>
-</div>
+    </div>
+  </div>
 
 </div>
 <!-- container -->

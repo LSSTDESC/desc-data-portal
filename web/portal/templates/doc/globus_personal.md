@@ -1,4 +1,3 @@
-<!--- Do not delete this line, it is needed for jinja_markdown to render this page correctly -->
 ## Set up [Globus Personal Connect](https://www.globus.org/globus-connect-personal)
 
 Your Globus account may grant you access to various Collections where you can access and transfer data.  You may also want to download directly to your own laptop.
