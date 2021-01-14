@@ -241,6 +241,9 @@ def browse(dataset_id=None, endpoint_id=None, endpoint_path=None):
             return redirect(url_for('browse'))
 
         file_list = [e for e in listing if e['type'] == 'file']
+        if dataset_id and 'example' in dataset:
+            for e in file_list:
+                e['is_example_set'] = (e['name'] in dataset['example'])
 
         ep = transfer.get_endpoint(endpoint_id)
 
@@ -248,8 +251,6 @@ def browse(dataset_id=None, endpoint_id=None, endpoint_path=None):
         endpoint_uri = https_server + endpoint_path if https_server else None
         webapp_xfer = 'https://app.globus.org/file-manager?' + \
             urlencode(dict(origin_id=endpoint_id, origin_path=endpoint_path))
-
-
 
         return render_template('browse.jinja2', endpoint_uri=endpoint_uri,
                            target="dataset" if dataset_id else "endpoint",
@@ -259,8 +260,7 @@ def browse(dataset_id=None, endpoint_id=None, endpoint_path=None):
                                         else None),
                            myid=(dataset['id'] if dataset_id
                                         else None),
-                           exsize=(dataset['exsize'] if dataset_id
-                                        else None),
+                           has_example_set=(dataset_id and 'example' in dataset),
                            file_list=file_list, webapp_xfer=webapp_xfer)
 
     if request.method == 'POST':
@@ -287,43 +287,6 @@ def browse(dataset_id=None, endpoint_id=None, endpoint_path=None):
         }
 
         return redirect(browse_endpoint)
-
-
-@app.route('/example/dataset_id/<dataset_id>', methods=['GET'])
-@authenticated
-def example(dataset_id=None):
-    if request.method == 'GET':
-
-        if dataset_id:
-            try:
-                dataset = next(ds for ds in datasets if ds['id'] == dataset_id)
-                requested_path = [dataset['path']] * len(dataset['example'])
-                requested_id = [dataset['id']] * len(dataset['example'])
-            except StopIteration:
-                abort(404)
-
-        params = {
-            'method': 'POST',
-            'action': url_for('submit_transfer', _external=True,
-                              _scheme='https'),
-            'filelimit': 0,
-            'folderlimit': 1
-        }
-
-        browse_endpoint = 'https://app.globus.org/file-manager?{}' \
-            .format(urlencode(params))
-
-        session['form'] = {
-            'dirselect': False,
-            'datasets': dataset['example'],
-            'path': requested_path,
-            'id': requested_id 
-        }
-
-        return redirect(browse_endpoint)
-
-
-
 
 
 @app.route('/transfer', methods=['GET', 'POST'])
@@ -396,7 +359,7 @@ def submit_transfer():
     source_endpoint_id = app.config['DATASET_ENDPOINT_ID']
     source_endpoint_base = app.config['DATASET_ENDPOINT_BASE']
     destination_endpoint_id = browse_endpoint_form['endpoint_id']
-    destination_folder = browse_endpoint_form.get('folder[0]') 
+    destination_folder = browse_endpoint_form.get('folder[0]')
 
     transfer_data = TransferData(transfer_client=transfer,
                                  source_endpoint=source_endpoint_id,

@@ -13,32 +13,30 @@
     </div>
 
   <p>
-    Displaying a list of files in {{target}} <strong>{{description}}</strong>.
-
-<!--
-    {%if endpoint_uri%}
-      <br>
-      Click on a file name to display the contents in your browser or download
-      via HTTP.
-    {%endif%}
-
-    {%if webapp_xfer%}
-      <br>
-      You can also <a href="{{webapp_xfer}}" target="_blank" rel="noopener">transfer files using the Globus
-      Webapp</a>.
-    {%endif%}
--->
-
-
-  </p>
-  <p class="grey-text small text-center pb-4">
-    Choose the files you wish to download and click the Transfer button at the bottom of the page <strong>or</strong>
-  <a href="{{url_for('example', dataset_id=myid)}}" class="btn btn-info btn-sm">Get an {{exsize}} Example Subset</a>  
+    Displaying files in {{target}} <strong>{{description}}</strong>.
   </p>
 
+  <p>
+    Choose the files you wish to download, then click the <strong>Transfer</strong> button to begin the transfer.
+    See <a href="{{url_for('render_doc', doc_name='download')}}">here</a> for detailed instructions.
+  </p>
 
     <div class="form-wrapper">
       <form class="form-inline" role="form" action="{{url_for('browse', dataset_id=myid)}}" method="post">
+
+        <div class="row">
+          <div class="col-md-9">
+            <button type="button" class="btn btn-info btn-sm" id="select-all">Select all</button>
+            <button type="button" class="btn btn-info btn-sm" id="unselect-all">Unselect all</button>
+            {%if has_example_set%}
+            <button type="button" class="btn btn-info btn-sm" id="select-example">Select Example Subset</button>
+            {%endif%}
+          </div>
+          <div class="form-actions col-md-3 pull-right">
+            <input name="browse" type="submit" class="btn btn-primary"
+                   value="Transfer">
+          </div>
+        </div>
 
         <div class="row">
           <div class="col-md-12">
@@ -63,7 +61,8 @@
                     </td>
                     <td class="col-md-1 text-right">{{file.size|filesizeformat}}</td>
                     <td class="col-md-1 text-center">
-                      <input type="checkbox" name="file" value="{{file.name}}">
+                      <input type="checkbox" name="file" value="{{file.name}}"
+                        data-is-example="{{file.is_example_set}}" data-filesize="{{file.size}}">
                       <input type="hidden" name="path" value="{{mypath}}">
                       <input type="hidden" name="id" value="{{myid}}">
                     </td>
@@ -98,5 +97,68 @@
 
 
 </div> <!-- container -->
+
+<script>
+
+function calc_total_size(){
+  var total = 0;
+  var count = 0;
+  var plural = "s";
+  $( "input:checkbox[name='file']:checked" ).each(function() {
+      total += Number($(this).attr("data-filesize"));
+      count += 1;
+  });
+  if (count == 1) plural = "";
+  var unit;
+  if (total < 1000){
+      unit = "B";
+  }
+  else if (total < 1000000){
+      total /= 1000;
+      unit = "KB";
+  }
+  else if (total < 1000000000){
+      total /= 1000000;
+      unit = "MB";
+  }
+  else if (total < 1000000000000){
+      total /= 1000000000;
+      unit = "GB";
+  }
+  else{
+      total /= 1000000000000;
+      unit = "TB";
+  }
+  var text = "Transfer (" +  count + " file" + plural + "; " + total.toFixed(1) + " " + unit + ")";
+  $( "input[type='submit'][name='browse']" ).val(text);
+}
+
+$( document ).ready(function() {
+
+  $( "#select-all" ).click(function(event) {
+    event.preventDefault();
+    $( "input:checkbox[name='file']" ).prop( "checked", true );
+    calc_total_size();
+  });
+
+  $( "#unselect-all" ).click(function(event) {
+    event.preventDefault();
+    $( "input:checkbox[name='file']" ).prop( "checked", false );
+    calc_total_size();
+  });
+
+  $( "#select-example" ).click(function(event) {
+    event.preventDefault();
+    $( "#unselect-all" ).click();
+    $( "input:checkbox[name='file'][data-is-example='True']" ).prop( "checked", true );
+    calc_total_size();
+  });
+
+  $( "input:checkbox[name='file']" ).change(function() {
+    calc_total_size();
+  });
+
+});
+</script>
 
 {%endblock%}
