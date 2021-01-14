@@ -1,21 +1,37 @@
 <!--- Do not delete this line, it is needed for jinja_markdown to render this page correctly -->
-## Accessing the DC2 Simulated Sky Survey
+## DC2 Simulated Sky Survey
 
-If you use the DC2 Simulated Sky Survey in your work, we ask that you cite the following publications.
+The DC2 Simulated Sky Survey is a 300-sq-deq simulated survey
+in six optical bands with observations following a reference LSST observing cadence.
 
-* [DESC DC2 Simulated Sky Survey Paper](https://ui.adsabs.harvard.edu/abs/2020arXiv201005926L/abstract)
-* [DESC DC2 Data Release Note](https://arxiv.org/abs/2101.04855)
+To learn more about the DC2 Simulated Sky Survey, you can read:
 
-In addition, if you use `GCRCatalogs` to access the data, please also cite [Mao et al. (LSST DESC), ApJS, 234, 36 (2018)](https://ui.adsabs.harvard.edu/abs/2018ApJS..234...36M/abstract).
+* [DESC DC2 Simulated Sky Survey Paper](https://ui.adsabs.harvard.edu/abs/2020arXiv201005926L/abstract):
+  a comprehensive description about the DC2 Simulated Sky Survey, including design choices and production details.
+* [DESC DC2 Data Release Note](https://arxiv.org/abs/2101.04855):
+  a brief note about the released dataset, including data file format, data partition scheme, and schema tables.
+
+If you use the DC2 Simulated Sky Survey in your work, we ask that you cite both publications above.
 
 ### Step 1: Download the catalog files
 
-Follow [these instructions](download) to download dpdd object or truth match data files from the DC2 Simulated Sky Survey.
+Follow [these instructions](download) to download "Object DPDD" or "Truth Match" data files from the DC2 Simulated Sky Survey.
 You can download the full data set or, if space is at a premium, a recommended subset of files.
+
+The data files you downloaded are in Parquet format, partitioned into sky regions
+(see Sec. 4.1 of the [Release Note](https://arxiv.org/abs/2101.04855) for details).
+You can access these files by standard tools that read Parquet format.
+We additionally provide a high-level Python package `GCRCatalogs` to facilitate easy access.
+
+Note that on some very old (e.g., older than 10 years) machines, reading Parquet files may be difficult.
+If that is a problem for you, please [let us know](https://github.com/LSSTDESC/desc-data-portal/discussions).
 
 ### Step 2: Prepare `GCRCatalogs`
 
 See [these instructions](install_gcr) to install and configure `GCRCatalogs`.
+
+If you use `GCRCatalogs` to access the data, please also cite
+[Mao et al. (LSST DESC), ApJS, 234, 36 (2018)](https://ui.adsabs.harvard.edu/abs/2018ApJS..234...36M/abstract).
 
 ### Step 3: Verify access to the data
 
@@ -27,7 +43,7 @@ print(GCRCatalogs.load_catalog('desc_dc2_run2.2i_dr6_object').available_tracts)
 print(GCRCatalogs.load_catalog('desc_dc2_run2.2i_dr6_truth').available_tracts)
 ```
 
-### Following the notebooks to access data
+### Step 4: Follow the notebooks to access data
 
 You can find examples of using `GCRCatalogs` in our [tutorial notebooks](https://github.com/LSSTDESC/desc-data-portal/tree/main/notebooks).
 

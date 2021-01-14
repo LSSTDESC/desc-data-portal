@@ -1,20 +1,34 @@
 <!--- Do not delete this line, it is needed for jinja_markdown to render this page correctly -->
+## CosmoDC2
 
-## Accessing cosmoDC2
+CosmoDC2 is a large synthetic galaxy catalog designed to support precision dark energy science with LSST,
+covering 440 sq. deg. of sky area to a redshift of z = 3, with a magnitude depth of 28 in the r band.
+A wide range of galaxy properties are available in cosmoDC2.
+To learn more about cosmoDC2, please see
 
-If you use cosmoDC2 in your work, please cite [Korytov et al. (LSST DESC), ApJS, 245, 26 (2019)](https://ui.adsabs.harvard.edu/abs/2019ApJS..245...26K/abstract). In addition, if you use `GCRCatalogs` as described here to access cosmoDC2, please also cite [Mao et al. (LSST DESC), ApJS, 234, 36 (2018)](https://ui.adsabs.harvard.edu/abs/2018ApJS..234...36M/abstract).
+- [Korytov et al. (LSST DESC), ApJS, 245, 26 (2019)](https://ui.adsabs.harvard.edu/abs/2019ApJS..245...26K/abstract).
 
+If you use cosmoDC2 in your work, we ask that you cite the publication above.
 
 ### Step 1: Download cosmoDC2 catalog files
 
 Follow [these instructions](download) to download "CosmoDC2 v1.1.4" data files.
 You can download the full data set or, if space is at a premium, a recommended subset of files.
-Note that the full catalog is partitioned into sky areas by healpixels and also by redshift ranges.
+The data files you downloaded are in HDF5 format, partitioned into sky areas (by healpixels) and redshift ranges.
+The data schema can be found [here](
+https://github.com/LSSTDESC/gcr-catalogs/blob/master/GCRCatalogs/SCHEMA.md#extragalactic-catalogs).
 
+While you can access these files by standard tools, we recommend that you use `GCRCatalogs` to access the catalog
+because some quantities described in the [cosmoDC2 schema](
+https://github.com/LSSTDESC/gcr-catalogs/blob/master/GCRCatalogs/SCHEMA.md#extragalactic-catalogs)
+are only available when you access with `GCRCatalogs`, but not in the raw files.
 
 ### Step 2: Prepare `GCRCatalogs`
 
 See [these instructions](install_gcr) to install and configure `GCRCatalogs`.
+
+If you use `GCRCatalogs` as described here to access cosmoDC2, please also cite
+[Mao et al. (LSST DESC), ApJS, 234, 36 (2018)](https://ui.adsabs.harvard.edu/abs/2018ApJS..234...36M/abstract).
 
 ### Step 3: Load cosmoDC2 with GCRCatalogs
 
