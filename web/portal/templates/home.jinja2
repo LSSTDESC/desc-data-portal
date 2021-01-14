@@ -29,14 +29,14 @@
         <div class="row">
 
           <!--Grid column-->
-          <div class="col-sm-3 mb-4 px-4">
-            <p><img src="{{url_for('static',filename='img/logo.png') }}" class="img-fluid" alt="DESC Logo" width="100%"></p>
+          <div class="col-sm-2 mb-4 px-4">
+            <p><a href="https://lsstdesc.org"><img src="{{url_for('static',filename='img/logo.png') }}" class="img-fluid" alt="DESC Logo" width="100%"></a></p>
           </div>
           <!--Grid column-->
 
           <!--Grid column-->
-          <div class="col-sm-9 mb-4 px-4">
-      	    <p>Welcome to the <a href="https://lsstdesc.org">LSST DESC</a> Data Portal</p>
+          <div class="col-sm-10 mb-4 px-4">
+      	    <h4>Welcome to the <a href="https://lsstdesc.org">LSST DESC</a> Data Portal</h4>
             {%if session.get('is_authenticated')%}
             <p>You have logged into Globus. You may click <a href="{{url_for('transfer')}}">Transfer</a> in the top menu to browse and download data.</p>
             <p>See the "Getting Started" section below for detailed instructions.</p>
@@ -92,7 +92,7 @@
 
     <!--Section: acknowledgements -->
     <section>
-      <div class="col-12">
+      <div class="col-12 home-ack">
         <p class="grey-text small text-center pb-4">
           DESC acknowledges ongoing support from the US Department of Energy, IN2P3 (France), the STFC (United Kingdom), and the NSF and LSST Corporation (United States).
         </p>
