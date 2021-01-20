@@ -10,6 +10,13 @@ Once authenticated with Globus, users may transfer either whole directories or i
 
 ![Transfer](/static/img/transfer.png)
 
+### Chosing the LSSTDESC Data Source
+
+The LSSTDESC Data is mirrored on two separate Globus endpoints, one at NERSC and the other at Argonne National Lab(ANL).  You may choose which endpoint you wish to use as your LSSTDESC data source.  Your currently chosen data source will be indicated on the Transfer page.  If you wish to change which data source you use for your transfers, you can visit the Profile page and click on the data source and then click Save. All future data transfers will use your chosen LSSTDESC data source until you change it again on the Profile page.  If you are satisfied with the chosen data source, you can proceed to download data.
+
+![Profile](static/img/profile.png)
+
+### Download Data
 
 If you wish to download whole directories, select the datasets to download and then click Transfer at the bottom of the page.
 
