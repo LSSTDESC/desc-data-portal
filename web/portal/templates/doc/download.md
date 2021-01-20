@@ -12,7 +12,11 @@ Once authenticated with Globus, users may transfer either whole directories or i
 
 ### Choosing the LSSTDESC Data Source
 
-The LSSTDESC data is mirrored on two separate Globus endpoints, one at NERSC and the other at Argonne National Lab (ANL).  You may choose which endpoint you wish to use as your LSSTDESC data source.  Your currently chosen data source will be indicated on the Transfer page.  If you wish to change which data source you use for your transfers, you can visit the Profile page and click on a data source and then click Save. All future data transfers will use your chosen LSSTDESC data source until you change it again on the Profile page.  If you are satisfied with the chosen data source, you can proceed to download data.
+The LSSTDESC data is mirrored on two separate Globus endpoints, one at NERSC and the other at Argonne National Lab (ANL).  You may choose which endpoint you wish to use as your LSSTDESC data source.  Your currently chosen data source will be indicated on the Transfer page.  
+
+If you wish to change which data source you use for your transfers, you can visit the [Profile page]({{url_for('profile')}}) and click on a data source and then click Save. All future data transfers will use your chosen LSSTDESC data source until you change it again on the Profile page.  
+
+If you are satisfied with the chosen data source, you can proceed to download data.
 
 ![Profile](/static/img/profile.png)
 
