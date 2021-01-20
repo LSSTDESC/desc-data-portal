@@ -532,3 +532,8 @@ div.home-ack{
     margin: 8px 0 8px 8px;
   }
 }
+
+.btn.active, .btn:active{
+  outline:5px auto -webkit-focus-ring-color;
+  outline-offset:-2px;
+}

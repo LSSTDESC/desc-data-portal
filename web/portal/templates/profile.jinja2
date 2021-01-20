@@ -60,10 +60,10 @@
           <div class="form-group">
             <label for="endpoint">LSSTDESC Data Source</label>
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
-              <label class="btn btn-outline-primary {{'active focus' if session.source_endpoint == 1 else ''}}">
+              <label class="btn btn-outline-primary {{'active' if session.source_endpoint == 1 else ''}}">
                 <input type="radio" name="endpoint" id="nerscradio" autocomplete="off" value="1" {{'checked' if session.source_endpoint == 1 else ''}} > NERSC
               </label>
-              <label class="btn btn-outline-primary  {{'active focus' if session.source_endpoint == 0 else ''}}">
+              <label class="btn btn-outline-primary  {{'active' if session.source_endpoint == 0 else ''}}">
                 <input type="radio" name="endpoint" id="anlradio" autocomplete="off" value="0" {{'checked' if session.source_endpoint == 0 else ''}}> ANL
               </label>
             </div>
