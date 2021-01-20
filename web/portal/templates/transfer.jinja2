@@ -12,10 +12,12 @@
     </div>
 
     <p>
-      Select some dataset(s) to transfer
-      <strong>or</strong>
-      click on a dataset name to browse and choose individual files for transfer.
+      Choose the dataset(s) you wish to download, then click the <strong>Transfer</strong> button to begin transferring the full dataset(s) from
+      {{ 'ANL' if session.source_endpoint == 0 else 'NERSC' }}.
+      <strong>Or</strong>, click on a dataset name to browse and choose individual files for transfer.
+      See <a href="{{url_for('render_doc', doc_name='download')}}">here</a> for detailed instructions.
     </p>
+
     <p>
       To learn more about a dateset, click the "doc" link next to the dataset name.
     </p>

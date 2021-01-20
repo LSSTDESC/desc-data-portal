@@ -18,7 +18,8 @@
   </p>
 
   <p>
-    Choose the files you wish to download, then click the <strong>Transfer</strong> button to begin the transfer.
+    Choose the files you wish to download, then click the <strong>Transfer</strong> button to begin transferring files from
+    {{ 'ANL' if session.source_endpoint == 0 else 'NERSC' }}.
     See <a href="{{url_for('render_doc', doc_name='download')}}">here</a> for detailed instructions.
   </p>
 
