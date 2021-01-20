@@ -69,7 +69,6 @@ def logout():
     ga_logout_url.append('?client={}'.format(app.config['PORTAL_CLIENT_ID']))
     ga_logout_url.append('&redirect_uri={}'.format(redirect_uri))
     ga_logout_url.append('&redirect_name=LSSTDESC Data Portal')
-    #ga_logout_url.append('&redirect_name=Globus Sample Data Portal')
 
     # Redirect the user to the Globus Auth logout page
     return redirect(''.join(ga_logout_url))
@@ -84,11 +83,12 @@ def profile():
         profile = database.load_profile(identity_id)
 
         if profile:
-            name, email, institution = profile
+            name, email, institution, source_endpoint = profile
 
             session['name'] = name
             session['email'] = email
             session['institution'] = institution
+            session['source_endpoint'] = source_endpoint
         else:
             flash(
                 'Please complete any missing profile fields and press Save.')
@@ -98,14 +98,17 @@ def profile():
 
         return render_template('profile.jinja2')
     elif request.method == 'POST':
+        print("inside profile post")
         name = session['name'] = request.form['name']
         email = session['email'] = request.form['email']
         institution = session['institution'] = request.form['institution']
+        source_endpoint = session['source_endpoint'] = int(request.form['endpoint'])
 
         database.save_profile(identity_id=session['primary_identity'],
                               name=name,
                               email=email,
-                              institution=institution)
+                              institution=institution,
+                              source_endpoint=int(source_endpoint))
 
         flash('Thank you! Your profile has been successfully updated.')
 
@@ -174,11 +177,12 @@ def authcallback():
         profile = database.load_profile(session['primary_identity'])
 
         if profile:
-            name, email, institution = profile
+            name, email, institution, source_endpoint = profile
 
             session['name'] = name
             session['email'] = email
             session['institution'] = institution
+            session['source_endpoint'] = source_endpoint
         else:
             return redirect(url_for('profile',
                             next=url_for('transfer')))
@@ -217,8 +221,10 @@ def browse(dataset_id=None, endpoint_id=None, endpoint_path=None):
             except StopIteration:
                 abort(404)
 
-            endpoint_id = app.config['DATASET_ENDPOINT_ID']
-            endpoint_path = app.config['DATASET_ENDPOINT_BASE'] + dataset['path']
+            endpoint_id = app.config['NERSC_ENDPOINT_ID'] if session['source_endpoint'] else app.config['ANL_ENDPOINT_ID']
+            endpoint_path = (app.config['NERSC_ENDPOINT_BASE'] + dataset['path']) if session['source_endpoint'] else (app.config['ANL_ENDPOINT_BASE'] + dataset['path'])
+  #          endpoint_id = app.config['DATASET_ENDPOINT_ID'] 
+  #          endpoint_path = app.config['DATASET_ENDPOINT_BASE'] + dataset['path']
 
         else:
             endpoint_path = '/' + endpoint_path
@@ -357,8 +363,10 @@ def submit_transfer():
 
     transfer = TransferClient(authorizer=authorizer)
 
-    source_endpoint_id = app.config['DATASET_ENDPOINT_ID']
-    source_endpoint_base = app.config['DATASET_ENDPOINT_BASE']
+    #source_endpoint_id = app.config['DATASET_ENDPOINT_ID']
+    #source_endpoint_base = app.config['DATASET_ENDPOINT_BASE']
+    source_endpoint_id = app.config['NERSC_ENDPOINT_ID'] if session['source_endpoint'] else app.config['ANL_ENDPOINT_ID']
+    source_endpoint_base =  app.config['NERSC_ENDPOINT_BASE'] if session['source_endpoint'] else app.config['ANL_ENDPOINT_BASE']
     destination_endpoint_id = browse_endpoint_form['endpoint_id']
     destination_folder = browse_endpoint_form.get('folder[0]')
 
