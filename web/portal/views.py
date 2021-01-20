@@ -177,11 +177,12 @@ def authcallback():
         profile = database.load_profile(session['primary_identity'])
 
         if profile:
-            name, email, institution = profile
+            name, email, institution, source_endpoint = profile
 
             session['name'] = name
             session['email'] = email
             session['institution'] = institution
+            session['source_endpoint'] = source_endpoint
         else:
             return redirect(url_for('profile',
                             next=url_for('transfer')))
