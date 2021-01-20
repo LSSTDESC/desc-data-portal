@@ -46,22 +46,23 @@ class Database:
                      identity_id=None,
                      name=None,
                      email=None,
-                     institution=None):
+                     institution=None,
+                     source_endpoint=None):
         """Persist user profile."""
         db = self.get_db()
 
-        db.execute("""update profile set name = ?, email = ?, institution = ?
+        db.execute("""update profile set name = ?, email = ?, institution = ?, source_endpoint = ?
                    where identity_id = ?""",
-                   (name, email, institution, identity_id))
+                   (name, email, institution, source_endpoint, identity_id))
 
-        db.execute("""insert into profile (identity_id, name, email, institution)
-                   select ?, ?, ?, ? where changes() = 0""",
-                   (identity_id, name, email, institution))
+        db.execute("""insert into profile (identity_id, name, email, institution, source_endpoint)
+                   select ?, ?, ?, ?, ? where changes() = 0""",
+                   (identity_id, name, email, institution, source_endpoint))
         db.commit()
 
     def load_profile(self, identity_id):
         """Load user profile."""
-        return self.query_db("""select name, email, institution from profile
+        return self.query_db("""select name, email, institution, source_endpoint from profile
                              where identity_id = ?""",
                              [identity_id],
                              one=True)
