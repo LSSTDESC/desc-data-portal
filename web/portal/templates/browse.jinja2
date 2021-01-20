@@ -19,7 +19,7 @@
 
   <p>
     Choose the files you wish to download, then click the <strong>Transfer</strong> button to begin transferring files from
-    {{ 'ANL' if session.source_endpoint == 0 else 'NERSC' }}.
+    <a href="{{url_for('profile')}}" title="Click to change source endpoint on the Profile page.">{{- 'ANL' if session.source_endpoint == 0 else 'NERSC' -}}</a>.
     See <a href="{{url_for('render_doc', doc_name='download')}}">here</a> for detailed instructions.
   </p>
 
