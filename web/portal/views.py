@@ -17,7 +17,10 @@ except ImportError:
 
 @app.route('/', methods=['GET'])
 def home():
-    """Home page - play with it if you must!"""
+    if 'source_endpoint' in session:
+        pass
+    else:
+        session['source_endpoint'] = 1
     return render_template('home.jinja2')
 
 
