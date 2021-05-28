@@ -17,7 +17,8 @@ except ImportError:
 
 @app.route('/', methods=['GET'])
 def home():
-    """Home page - play with it if you must!"""
+    if 'source_endpoint' not in session:
+        session['source_endpoint'] = 1
     return render_template('home.jinja2')
 
 
@@ -430,5 +431,4 @@ def transfer_status(task_id):
     task = transfer.get_task(task_id)
 
     return render_template('transfer_status.jinja2', task=task)
-
 
