@@ -43,7 +43,8 @@
                   <tr>
                     <td class="col-md-5 text-left">
                       <i class="fa fa-folder fa-lg"></i>&nbsp;
-                      <a href="{{url_for('browse', dataset_id=dataset['id'])}}">{{dataset["name"]}}</a>
+                      {%if dataset['browse']%}<a href="{{url_for('browse', dataset_id=dataset['id'])}}">{{dataset["name"]}}</a>
+                      {%else%}{{dataset["name"]}}{%endif%}
                       {%if dataset['doc_name']%}(<a href="{{url_for('render_doc', doc_name=dataset['doc_name'])}}">doc</a>){%endif%}
                     </td>
                     <td class="col-md-1 text-right">{{dataset['size']}}</td>
