@@ -6,8 +6,7 @@
         "size": "63 GB",
         "example": ["truth_tract3830.parquet", "truth_tract3831.parquet", "truth_tract4028.parquet", "truth_tract4029.parquet"],
         "doc_name": "dc2_sim_sky_survey",
-        "browse": "True",
-        "deprecated": "False"
+        "browse": "True"
     },
 
     {
@@ -17,8 +16,7 @@
         "size": "118 GB",
         "example": ["object_dpdd_tract3830.parquet", "object_dpdd_tract3831.parquet", "object_dpdd_tract4028.parquet", "object_dpdd_tract4029.parquet"],
         "doc_name": "dc2_sim_sky_survey",
-        "browse": "True",
-        "deprecated": "False"
+        "browse": "True"
     },
 
     {
@@ -26,8 +24,7 @@
         "id": "e8d5fb40-2a36-4ca0-aab9-bf1f0cd099e2",
         "path": "lsstdesc-public/dc2/run2.2i-dr6-v2/coadd-t3828-t3829",
         "size": "202 GB",
-        "doc_name": "dc2_sim_sky_survey",
-        "deprecated": "True"
+        "doc_name": "dc2_sim_sky_survey"
     },
 
     {
@@ -35,8 +32,7 @@
         "id": "1b96a580-5b4f-417a-a366-d6201cebd28f",
         "path": "lsstdesc-public/dc2/run2.2i-dr6-v2/coadd-t3828-t3829-small",
         "size": "4.8 GB",
-        "doc_name": "dc2_sim_sky_survey",
-        "deprecated": "True"
+        "doc_name": "dc2_sim_sky_survey"
     },
 
     {
@@ -68,8 +64,7 @@
         "size": "5.2 TB",
         "example": ["z_0_1.step_all.healpix_9685.hdf5", "z_1_2.step_all.healpix_9685.hdf5", "z_2_3.step_all.healpix_9685.hdf5"],
         "doc_name": "cosmodc2",
-        "browse": "True",
-        "deprecated": "False"
+        "browse": "True"
     }
 
 ]
