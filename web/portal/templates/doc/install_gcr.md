@@ -18,7 +18,7 @@ However, please consider switching to the conda-forge channel;
 see [instructions](https://conda-forge.org/docs/user/introduction.html#how-can-i-install-packages-from-conda-forge)
 and [why](https://conda-forge.org/docs/user/tipsandtricks.html#using-multiple-channels).
 
-*NOTE:* In order to access the latest catalogs (as of June, 2021) you need GCRCatalogs
+*NOTE:* In order to access the latest catalogs (as of June 2021) you need `GCRCatalogs`
 version v1.3.3 or later. When using either of the install methods described below you will get a suitable released version. If you have already installed GCRCatalogs for an earlier
 data release, you can update instead.
 
