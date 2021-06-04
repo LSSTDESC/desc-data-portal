@@ -43,8 +43,9 @@
                   <tr>
                     <td class="col-md-5 text-left">
                       <i class="fa fa-folder fa-lg"></i>&nbsp;
-                      {%if dataset['browse']%}<a href="{{url_for('browse', dataset_id=dataset['id'])}}">{{dataset["name"]}}</a>
-                      {%else%}{{dataset["name"]}}{%endif%}
+                      <a {%if dataset['browse']%} href="{{- url_for('browse', dataset_id=dataset['id']) -}}" {%else%} title="Browsing for image data not supported." {%endif%}>
+                       {{dataset["name"]}}
+                      </a>
                       {%if dataset['doc_name']%}(<a href="{{url_for('render_doc', doc_name=dataset['doc_name'])}}">doc</a>){%endif%}
                     </td>
                     <td class="col-md-1 text-right">{{dataset['size']}}</td>
