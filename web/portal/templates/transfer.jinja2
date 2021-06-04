@@ -17,19 +17,9 @@
       <strong>Or</strong>, for all but the coadd datasets, click on a dataset name to browse and choose individual files for transfer.
       See <a href="{{url_for('render_doc', doc_name='download')}}">here</a> for detailed instructions.
     </p>
-    <p>
-      The <b>v1</b> datasets are deprecated. Under normal circumstances you
-      should choose the corresponding <b>v2</b> dataset instead.
-    </p>
+
     <p>
       To learn more about a dataset, click the "doc" link next to the dataset name.
-    </p>
-
-    <p id="dataset_filter">
-      Dataset filter:
-      <label><input type="checkbox" value="catalog" checked> Catalogs</label>
-      <label><input type="checkbox" value="image" checked> Images</label>
-      <label><input type="checkbox" value="deprecated"> Deprecated</label>
     </p>
 
     <p id="dataset_filter">
@@ -57,9 +47,9 @@
                   <tr class="{{- dataset['tags'] | join(' ') -}}">
                     <td class="col-md-5 text-left">
                       <i class="fa fa-folder fa-lg"></i>&nbsp;
-                      <a {%if dataset['browse']%} href="{{- url_for('browse', dataset_id=dataset['id']) -}}" {%else%} title="Browsing for image data not supported." {%endif%}>
+                      {%if dataset['browse']%}<a href="{{- url_for('browse', dataset_id=dataset['id']) -}}">{%else%}<span title="Browsing for image data not supported.">{%endif%}>
                        {{dataset["name"]}}
-                      </a>
+                      {%if dataset['browse']%}</a>{%else%}</span>{%endif%}>
                       {%if dataset['doc_name']%}(<a href="{{url_for('render_doc', doc_name=dataset['doc_name'])}}">doc</a>){%endif%}
                       {%if 'deprecated' in dataset['tags']%}[deprecated]{%endif%}
                     </td>
@@ -97,7 +87,7 @@
 <script>
 function update_dataset_rows(){
   $( "#dataset_filter input[type='checkbox']" ).each(function() {
-      $( "#dataset_table tr." + $(this).val() ).css("display", $(this).checked ? "table-row" : "none")l
+      $( "#dataset_table tr." + $(this).val() ).css("display", $(this).checked ? "table-row" : "none");
   });
 }
 
