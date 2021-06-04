@@ -47,9 +47,9 @@
                   <tr class="{{- dataset['tags'] | join(' ') -}}">
                     <td class="col-md-5 text-left">
                       <i class="fa fa-folder fa-lg"></i>&nbsp;
-                      {%if dataset['browse']%}<a href="{{- url_for('browse', dataset_id=dataset['id']) -}}">{%else%}<span title="Browsing for image data not supported.">{%endif%}>
+                      {%if dataset['browse']%}<a href="{{- url_for('browse', dataset_id=dataset['id']) -}}">{%else%}<span title="Browsing for image data not supported.">{%endif%}
                        {{dataset["name"]}}
-                      {%if dataset['browse']%}</a>{%else%}</span>{%endif%}>
+                      {%if dataset['browse']%}</a>{%else%}</span>{%endif%}
                       {%if dataset['doc_name']%}(<a href="{{url_for('render_doc', doc_name=dataset['doc_name'])}}">doc</a>){%endif%}
                       {%if 'deprecated' in dataset['tags']%}[deprecated]{%endif%}
                     </td>
