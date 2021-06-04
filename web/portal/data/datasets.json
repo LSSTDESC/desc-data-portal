@@ -20,7 +20,7 @@
     },
 
     {
-        "name": "DC2 coadd dr6 v2",
+        "name": "DC2 Coadded Image dr6 v2 (2 tracts)",
         "id": "e8d5fb40-2a36-4ca0-aab9-bf1f0cd099e2",
         "path": "lsstdesc-public/dc2/run2.2i-dr6-v2/coadd-t3828-t3829",
         "size": "202 GB",
@@ -28,7 +28,7 @@
     },
 
     {
-        "name": "DC2 coadd dr6 v2 small",
+        "name": "DC2 Coadded Image dr6 v2 (2 patches)",
         "id": "1b96a580-5b4f-417a-a366-d6201cebd28f",
         "path": "lsstdesc-public/dc2/run2.2i-dr6-v2/coadd-t3828-t3829-small",
         "size": "4.8 GB",
