@@ -87,7 +87,7 @@
 <script>
 function update_dataset_rows(){
   $( "#dataset_filter input[type='checkbox']" ).each(function() {
-      $( "#dataset_table tr." + $(this).val() ).css("display", $(this).checked ? "table-row" : "none");
+      $( "#dataset_table tr." + $(this).val() ).css("display", $(this).prop("checked") ? "table-row" : "none");
   });
 }
 
