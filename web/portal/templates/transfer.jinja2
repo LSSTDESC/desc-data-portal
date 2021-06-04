@@ -32,6 +32,13 @@
       <label><input type="checkbox" value="deprecated"> Deprecated</label>
     </p>
 
+    <p id="dataset_filter">
+      Dataset filter:
+      <label><input type="checkbox" value="catalog" checked> Catalogs</label>
+      <label><input type="checkbox" value="image" checked> Images</label>
+      <label><input type="checkbox" value="deprecated"> Deprecated</label>
+    </p>
+
     <div class="form-wrapper">
       <form class="form-inline" role="form" action="{{url_for('transfer')}}" method="post">
         <div class="row">
