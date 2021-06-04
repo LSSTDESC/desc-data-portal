@@ -14,12 +14,15 @@
     <p>
       Choose the dataset(s) you wish to download, then click the <strong>Transfer</strong> button to begin transferring the full dataset(s) from
       <a href="{{url_for('profile')}}" title="Click to change source endpoint on the Profile page.">{{- 'ANL' if session.source_endpoint == 0 else 'NERSC' -}}</a>.
-      <strong>Or</strong>, click on a dataset name to browse and choose individual files for transfer.
+      <strong>Or</strong>, for all but the coadd datasets, click on a dataset name to browse and choose individual files for transfer.
       See <a href="{{url_for('render_doc', doc_name='download')}}">here</a> for detailed instructions.
     </p>
-
     <p>
-      To learn more about a dateset, click the "doc" link next to the dataset name.
+      The <b>v1</b> datasets are deprecated. Under normal circumstances you
+      should choose the corresponding <b>v2</b> dataset instead.
+    </p>
+    <p>
+      To learn more about a dataset, click the "doc" link next to the dataset name.
     </p>
 
     <div class="form-wrapper">
