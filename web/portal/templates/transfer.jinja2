@@ -14,7 +14,7 @@
     <p>
       Choose the dataset(s) you wish to download, then click the <strong>Transfer</strong> button to begin transferring the full dataset(s) from
       <a href="{{url_for('profile')}}" title="Click to change source endpoint on the Profile page.">{{- 'ANL' if session.source_endpoint == 0 else 'NERSC' -}}</a>.
-      <strong>Or</strong>, for all but the coadd datasets, click on a dataset name to browse and choose individual files for transfer.
+      <strong>Or</strong>, you can click on a catalog dataset to browse and choose individual files for transfer (not supported for image datasets).
       See <a href="{{url_for('render_doc', doc_name='download')}}">here</a> for detailed instructions.
     </p>
 
@@ -24,9 +24,9 @@
 
     <p id="dataset_filter">
       Dataset filter:
-      <label><input type="checkbox" value="catalog" checked> Catalogs</label>
-      <label><input type="checkbox" value="image" checked> Images</label>
-      <label><input type="checkbox" value="deprecated"> Deprecated</label>
+      <label style="margin: 0 8px;"><input type="checkbox" value="catalog" checked> Catalogs</label>
+      <label style="margin: 0 8px;"><input type="checkbox" value="image" checked> Images</label>
+      <label style="margin: 0 8px;"><input type="checkbox" value="deprecated"> Deprecated</label>
     </p>
 
     <div class="form-wrapper">
