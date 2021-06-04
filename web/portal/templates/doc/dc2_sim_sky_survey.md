@@ -56,6 +56,6 @@ If you're planning to run the example notebooks and don't already have JupyterLa
 ## Images
 
 Unlike the catalog datasets, it is not possible to choose a subset of the image collection datasets.
-For a detailed description of the coadded image and associated files included, please see Appendix C of the [DESC DC2 Data Release Note](https://arxiv.org/abs/2101.04855).
+For a detailed description of the coadded images and associated files included, please see Appendix C of the [DESC DC2 Data Release Note](https://arxiv.org/abs/2101.04855).
 
 Two image collections (of different sky coverages) are provided. `DC2 coadd dr6 v2` includes all coadded images belonging to tracts 3828 and 3829. `DC2 coadd dr6 v2 small` includes coadded images for a single patch for each of these tracts.
