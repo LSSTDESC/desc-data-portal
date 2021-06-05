@@ -14,22 +14,26 @@
     <p>
       Choose the dataset(s) you wish to download, then click the <strong>Transfer</strong> button to begin transferring the full dataset(s) from
       <a href="{{url_for('profile')}}" title="Click to change source endpoint on the Profile page.">{{- 'ANL' if session.source_endpoint == 0 else 'NERSC' -}}</a>.
-      <strong>Or</strong>, for all but the coadd datasets, click on a dataset name to browse and choose individual files for transfer.
+      <strong>Or</strong>, you can click on a catalog dataset to browse and choose individual files for transfer (not supported for image datasets).
       See <a href="{{url_for('render_doc', doc_name='download')}}">here</a> for detailed instructions.
     </p>
-    <p>
-      The <b>v1</b> datasets are deprecated. Under normal circumstances you
-      should choose the corresponding <b>v2</b> dataset instead.
-    </p>
+
     <p>
       To learn more about a dataset, click the "doc" link next to the dataset name.
+    </p>
+
+    <p id="dataset_filter">
+      Dataset filter:
+      <label style="margin: 0 8px;"><input type="checkbox" value="catalog" checked> Catalogs</label>
+      <label style="margin: 0 8px;"><input type="checkbox" value="image" checked> Images</label>
+      <label style="margin: 0 8px;"><input type="checkbox" value="deprecated"> Deprecated</label>
     </p>
 
     <div class="form-wrapper">
       <form class="form-inline" role="form" action="{{url_for('transfer')}}" method="post">
         <div class="row">
           <div class="col-md-12">
-            <table class="table">
+            <table class="table" id="dataset_table">
               <th class="col-md-5 text-left">
                 Dataset Name
               </th>
@@ -40,11 +44,14 @@
 
               {%if datasets%}
                 {%for dataset in datasets%}
-                  <tr>
+                  <tr class="{{- dataset['tags'] | join(' ') -}}">
                     <td class="col-md-5 text-left">
                       <i class="fa fa-folder fa-lg"></i>&nbsp;
-                      <a href="{{url_for('browse', dataset_id=dataset['id'])}}">{{dataset["name"]}}</a>
+                      {%if dataset['browse']%}<a href="{{- url_for('browse', dataset_id=dataset['id']) -}}">{%else%}<span title="Browsing for image data not supported.">{%endif%}
+                       {{dataset["name"]}}
+                      {%if dataset['browse']%}</a>{%else%}</span>{%endif%}
                       {%if dataset['doc_name']%}(<a href="{{url_for('render_doc', doc_name=dataset['doc_name'])}}">doc</a>){%endif%}
+                      {%if 'deprecated' in dataset['tags']%}[deprecated]{%endif%}
                     </td>
                     <td class="col-md-1 text-right">{{dataset['size']}}</td>
                     <td class="col-md-1 text-center">
@@ -76,4 +83,23 @@
     </div> <!-- form -->
 
   </div> <!-- container -->
+
+<script>
+function update_dataset_rows(){
+  $( "#dataset_filter input[type='checkbox']" ).each(function() {
+      $( "#dataset_table tr." + $(this).val() ).css("display", $(this).prop("checked") ? "table-row" : "none");
+  });
+}
+
+$( document ).ready(function() {
+
+  $( "#dataset_filter input[type='checkbox']" ).change(function() {
+    update_dataset_rows();
+  });
+
+  update_dataset_rows();
+
+});
+</script>
+
 {%endblock%}
