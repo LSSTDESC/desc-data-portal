@@ -27,15 +27,6 @@
         "browse": "True"
     },
     {
-        "name": "Foregrounds",
-        "id": "aec142b2-d523-11eb-8322-45cc1b8ccd4a",
-        "path": "202102_design_tool_run/foregrounds",
-        "size": "30 GB",
-        "tags": ["catalog"],
-        "doc_name": "202102_design_tool_run_foregrounds",
-        "browse": "True"
-    },
-    {
         "name": "Noise only no splits",
         "id": "aec142b2-d523-11eb-8322-45cc1b8ccd4a",
         "path": "202102_design_tool_run/noise",
