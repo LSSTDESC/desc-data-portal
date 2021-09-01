@@ -1,75 +1,57 @@
 [
     {
-        "name": "DC2 Truth Match dr6 v2",
-        "id": "63d293ae-53b2-4a03-b1de-54eadedd3188",
-        "path": "lsstdesc-public/dc2/run2.2i-dr6-v2/truth_match",
-        "size": "63 GB",
-        "example": ["truth_tract3830.parquet", "truth_tract3831.parquet", "truth_tract4028.parquet", "truth_tract4029.parquet"],
-        "doc_name": "dc2_sim_sky_survey",
-        "tags": ["catalog"],
-        "browse": "True"
+        "name": "Atlanta International Airport Climate Data",
+        "id": "5352507d-1293-4827-8ba9-c2d4a0eb78d1",
+        "path": "dataset_atl"
     },
-
     {
-        "name": "DC2 Object DPDD dr6 v2",
-        "id": "172f874f-4014-4cc0-82a0-22d59a04c5db",
-        "path": "lsstdesc-public/dc2/run2.2i-dr6-v2/object_dpdd",
-        "size": "118 GB",
-        "example": ["object_dpdd_tract3830.parquet", "object_dpdd_tract3831.parquet", "object_dpdd_tract4028.parquet", "object_dpdd_tract4029.parquet"],
-        "doc_name": "dc2_sim_sky_survey",
-        "tags": ["catalog"],
-        "browse": "True"
+        "name": "Boston Logan International Airport Climate Data",
+        "id": "5bb05576-7087-47bd-a32d-34165b00a29c",
+        "path": "dataset_bos"
     },
-
     {
-        "name": "DC2 Coadded Image dr6 v2 (2 tracts)",
-        "id": "e8d5fb40-2a36-4ca0-aab9-bf1f0cd099e2",
-        "path": "lsstdesc-public/dc2/run2.2i-dr6-v2/coadd-t3828-t3829",
-        "size": "202 GB",
-        "doc_name": "dc2_sim_sky_survey",
-        "tags": ["image"]
+        "name": "Baltimore-Washington International Airport Climate Data",
+        "id": "66cf9c1d-6b65-4a3b-9123-60539ddf5ccd",
+        "path": "dataset_bwi"
     },
-
     {
-        "name": "DC2 Coadded Image dr6 v2 (2 patches)",
-        "id": "1b96a580-5b4f-417a-a366-d6201cebd28f",
-        "path": "lsstdesc-public/dc2/run2.2i-dr6-v2/coadd-t3828-t3829-small",
-        "size": "4.8 GB",
-        "doc_name": "dc2_sim_sky_survey",
-        "tags": ["image"]
+        "name": "Dallas-Fort Worth International Airport Climate Data",
+        "id": "0a6690dc-8489-4df6-8cca-4f5029a65e1b",
+        "path": "dataset_dfw"
     },
-
     {
-        "name": "DC2 Truth Match dr6 v1",
-        "id": "7b50d9a5-3412-4c60-81bb-113ba7f519fa",
-        "path": "lsstdesc-public/dc2/run2.2i-dr6-v1/truth_match",
-        "size": "63 GB",
-        "example": ["truth_tract3830.parquet", "truth_tract3831.parquet", "truth_tract4028.parquet", "truth_tract4029.parquet"],
-        "doc_name": "dc2_sim_sky_survey",
-        "browse": "True",
-        "tags": ["catalog", "deprecated"]
+        "name": "Jacksonville International Airport Climate Data",
+        "id": "5c1c57de-4f93-41a5-b24b-4f7994879519",
+        "path": "dataset_jax"
     },
-
     {
-        "name": "DC2 Object DPDD dr6 v1",
-        "id": "11767c28-e6c8-4901-92de-3e3d7502c7d4",
-        "path": "lsstdesc-public/dc2/run2.2i-dr6-v1/object_dpdd",
-        "size": "118 GB",
-        "example": ["object_dpdd_tract3830.parquet", "object_dpdd_tract3831.parquet", "object_dpdd_tract4028.parquet", "object_dpdd_tract4029.parquet"],
-        "doc_name": "dc2_sim_sky_survey",
-        "browse": "True",
-        "tags": ["catalog", "deprecated"]
+        "name": "Las Vegas McCarran International Airport Climate Data",
+        "id": "971ceeb5-9498-4db6-a6e5-a625f92723ee",
+        "path": "dataset_las"
     },
-
     {
-        "name": "CosmoDC2 v1.1.4",
-        "id": "3f93a2d4-65e9-4598-bd4c-a864cae2a195",
-        "path": "lsstdesc-public/dc2/cosmoDC2_v1.1.4",
-        "size": "5.2 TB",
-        "example": ["z_0_1.step_all.healpix_9685.hdf5", "z_1_2.step_all.healpix_9685.hdf5", "z_2_3.step_all.healpix_9685.hdf5"],
-        "doc_name": "cosmodc2",
-        "tags": ["catalog"],
-        "browse": "True"
+        "name": "LaGuardia Airport Climate Data",
+        "id": "2847652b-d932-46ee-956e-ce81542ba141",
+        "path": "dataset_lga"
+    },
+    {
+        "name": "Miami International Airport Climate Data",
+        "id": "4319bc74-bd81-4294-8c69-bb968c99ab0b",
+        "path": "dataset_mia"
+    },
+    {
+        "name": "Milwaukee Mitchell International Airport Climate Data",
+        "id": "0148376f-5294-4ddd-8922-04cda2393a2c",
+        "path": "dataset_mke"
+    },
+    {
+        "name": "Philadelphia International Airport Climate Data",
+        "id": "53dece0c-c82d-4484-87e3-332d8af04bdd",
+        "path": "dataset_phl"
+    },
+    {
+        "name": "San Francisco International Airport Climate Data",
+        "id": "80cf39f6-ce88-44ef-a7f0-e45fabe77937",
+        "path": "dataset_sfo"
     }
-
 ]
