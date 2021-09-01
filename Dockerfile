@@ -10,9 +10,10 @@ EXPOSE 5000
 
 #ENV FLASK_ENV development
 ENV FLASK_APP portal/__init__.py
+ENV PYTHONUNBUFFERED 1
 #ENTRYPOINT ["flask"]
 CMD ["flask", "run", "--host=0.0.0.0"]
-RUN chmod +x /app/docker-entrypoint.sh
-ENTRYPOINT ["/app/docker-entrypoint.sh"]
+#RUN chmod +x /app/docker-entrypoint.sh
+#ENTRYPOINT ["/app/docker-entrypoint.sh"]
 
 
