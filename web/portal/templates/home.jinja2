@@ -5,14 +5,14 @@
 {%block body%}
 <!-- Page Header -->
 <!-- Set background image for this header on the line below. -->
-<header class="intro-header" style="background-image: url({{url_for('static', filename='img/lsst_stills_0009.jpg')}})">
+<header class="intro-header" style="background-image: url({{url_for('static', filename='img/atacamadesert.jpg')}})">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="site-heading">
-          <h1>LSSTDESC Data Portal</h1>
+          <h1>CMB-S4 Data Portal</h1>
           <hr class="small">
-          <span class="subheading">LSST Dark Energy Science Collaboration Public Data Access</span>
+          <span class="subheading">CMB-S4 Collaboration Public Data Access</span>
         </div>
       </div>
     </div>
@@ -36,7 +36,7 @@
 
           <!--Grid column-->
           <div class="col-xs-8 col-sm-10 mb-4 px-4">
-      	    <h3>Welcome to the <a href="https://lsstdesc.org">LSST DESC</a> Data Portal</h3>
+      	    <h3>Welcome to the <a href="https://cmb-s4.org">CMB-S4</a> Data Portal</h3>
             {%if session.get('is_authenticated')%}
             <p>You have logged into Globus. You may click <a href="{{url_for('transfer')}}">Transfer</a> in the top menu to browse and download data.</p>
             <p>See the "Getting Started" section below for detailed instructions.</p>
@@ -95,7 +95,7 @@
     <section>
       <div class="col-12 home-ack">
         <p class="grey-text small text-center pb-4">
-          DESC acknowledges ongoing support from the US Department of Energy, the Institut National de Physique Nucl&eacute;aire et Physique des Particules (France), the Science and Technology Facilities Council (United Kingdom), and the National Science Foundation and LSST Corporation (United States).
+          CMB-S4 acknowledges ongoing support from the US Department of Energy and the National Science Foundation.
         </p>
       </div>
     </section>

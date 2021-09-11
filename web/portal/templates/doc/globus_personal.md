@@ -8,5 +8,5 @@ To set up Globus Personal Connect
 * Visit [https://www.globus.org/globus-connect-personal](https://www.globus.org/globus-connect-personal)
 * Choose the installation for your machine and follow Globus' detailed instructions.
 
-Once your personal endpoint is set up, you can choose that as your destination for any transfer initiated by the LSSTDESC Data Portal or any Globus transfer.
+Once your personal endpoint is set up, you can choose that as your destination for any transfer initiated by the CMB-S4 Data Portal or any Globus transfer.
 
