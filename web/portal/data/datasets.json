@@ -13,7 +13,7 @@
         "id": "aec142b2-d523-11eb-8322-45cc1b8ccd4a",
         "path": "202102_design_tool_run/cmb_tensor_only_r3e-3",
         "size": "30 GB",
-        "tags": ["Design simulation tool"],
+        "tags": ["designtool"],
         "doc_name": "202102_design_tool_run_cmb_tensor_only_r3e-3",
         "browse": "True"
     },
@@ -22,7 +22,7 @@
         "id": "aec142b2-d523-11eb-8322-45cc1b8ccd4a",
         "path": "202102_design_tool_run/foregrounds",
         "size": "30 GB",
-        "tags": ["Design simulation tool"],
+        "tags": ["designtool"],
         "doc_name": "202102_design_tool_run_foregrounds",
         "browse": "True"
     },
@@ -31,7 +31,7 @@
         "id": "aec142b2-d523-11eb-8322-45cc1b8ccd4a",
         "path": "202102_design_tool_run/noise",
         "size": "31 GB",
-        "tags": ["Design simulation tool"],
+        "tags": ["designtool"],
         "doc_name": "202102_design_tool_run_noise",
         "browse": "True"
     },
@@ -40,7 +40,7 @@
         "id": "aec142b2-d523-11eb-8322-45cc1b8ccd4a",
         "path": "202102_design_tool_run/noise_atmo_7splits_LAT_chile",
         "size": "172 GB",
-        "tags": ["Design simulation tool"],
+        "tags": ["designtool"],
         "doc_name": "202102_design_tool_run_noise_atmo_7splits_LAT_chile",
         "browse": "True"
     },
@@ -49,7 +49,7 @@
         "id": "aec142b2-d523-11eb-8322-45cc1b8ccd4a",
         "path": "202102_design_tool_run/noise_atmo_7splits_LAT_pole",
         "size": "200 GB",
-        "tags": ["Design simulation tool"],
+        "tags": ["designtool"],
         "doc_name": "202102_design_tool_run_noise_atmo_7splits_LAT_pole",
         "browse": "True"
     },
@@ -58,7 +58,7 @@
         "id": "aec142b2-d523-11eb-8322-45cc1b8ccd4a",
         "path": "202102_design_tool_run/noise_atmo_7splits_SAT_pole",
         "size": "121 GB",
-        "tags": ["Design simulation tool"],
+        "tags": ["designtool"],
         "doc_name": "202102_design_tool_run_noise_atmo_7splits_SAT_pole",
         "browse": "True"
     }
