@@ -18,13 +18,13 @@ If you would prefer to download individual files, click on one of the Datasets a
 
 ![File Selection](/static/img/fileselect.png)
 
-Choose your files, and then click Transfer. You may optionally choose a predefined subset of the dataset by clicking the "Select Example Subset" button.  When finished choosing your files, click Transfer, and you will be taken to a Globus page where you will choose the destination for your download.
+Choose your files, and then click Transfer. When finished choosing your files, click Transfer, and you will be taken to a Globus page where you will choose the destination for your download.
 
 ![Globus](/static/img/globus.png)
 
-Click on Search in the Collection text box and choose a [Collection](https://docs.globus.org/how-to/get-started/#access_a_collection) as your desitination.  You may then select a path on that Collection, optionally create a label for this transfer and then click Submit.  If successful, a transfer submission window will appear:
+Click on Search in the Collection text box and choose a [Collection](https://docs.globus.org/how-to/get-started/#access_a_collection) as your destination.  You may then select a path on that Collection, optionally create a label for this transfer and then click Submit.  If successful, a transfer submission window will appear:
 
 ![TransferStarted](/static/img/success.png)
 
-You may monitor the transfer by clicking Refresh until the portal reports the transfer has successfully completed, or visit www.globus.org, login if necessary, and use the [Activity](https://docs.globus.org/how-to/get-started/#confirm_transfer_completion) tab.
+You may monitor the transfer by clicking Refresh until the portal reports the transfer has successfully completed, or visit [globus.org](https://www.globus.org), login if necessary, and use the [Activity](https://docs.globus.org/how-to/get-started/#confirm_transfer_completion) tab.
 
