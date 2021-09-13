@@ -1,6 +1,6 @@
 [
     {
-        "name": "Design simulation tool: Lensed CMB scalar only",
+        "name": "DT1: Lensed CMB scalar only",
         "id": "aec142b2-d523-11eb-8322-45cc1b8ccd4a",
         "path": "202102_design_tool_run/cmb_r0",
         "size": "30 GB",
@@ -9,7 +9,7 @@
         "browse": "True"
     },
     {
-        "name": "Design simulation tool: CMB tensor only r=3e-3",
+        "name": "DT1: CMB tensor only r=3e-3",
         "id": "aec142b2-d523-11eb-8322-45cc1b8ccd4a",
         "path": "202102_design_tool_run/cmb_tensor_only_r3e-3",
         "size": "30 GB",
@@ -18,7 +18,7 @@
         "browse": "True"
     },
     {
-        "name": "Design simulation tool: Foregrounds",
+        "name": "DT1: Foregrounds",
         "id": "aec142b2-d523-11eb-8322-45cc1b8ccd4a",
         "path": "202102_design_tool_run/foregrounds",
         "size": "30 GB",
@@ -27,7 +27,7 @@
         "browse": "True"
     },
     {
-        "name": "Design simulation tool: Noise only no splits",
+        "name": "DT1: Noise only no splits",
         "id": "aec142b2-d523-11eb-8322-45cc1b8ccd4a",
         "path": "202102_design_tool_run/noise",
         "size": "31 GB",
@@ -36,7 +36,7 @@
         "browse": "True"
     },
     {
-        "name": "Design simulation tool: Noise + Atmosphere, full and 7 splits, LAT Chile",
+        "name": "DT1: Noise + Atmosphere, full and 7 splits, LAT Chile",
         "id": "aec142b2-d523-11eb-8322-45cc1b8ccd4a",
         "path": "202102_design_tool_run/noise_atmo_7splits_LAT_chile",
         "size": "172 GB",
@@ -45,7 +45,7 @@
         "browse": "True"
     },
     {
-        "name": "Design simulation tool: Noise + Atmosphere, full and 7 splits, LAT Pole",
+        "name": "DT1: Noise + Atmosphere, full and 7 splits, LAT Pole",
         "id": "aec142b2-d523-11eb-8322-45cc1b8ccd4a",
         "path": "202102_design_tool_run/noise_atmo_7splits_LAT_pole",
         "size": "200 GB",
@@ -54,7 +54,7 @@
         "browse": "True"
     },
     {
-        "name": "Design simulation tool: Noise + Atmosphere, full and 7 splits, SAT Pole",
+        "name": "DT1: Noise + Atmosphere, full and 7 splits, SAT Pole",
         "id": "aec142b2-d523-11eb-8322-45cc1b8ccd4a",
         "path": "202102_design_tool_run/noise_atmo_7splits_SAT_pole",
         "size": "121 GB",
