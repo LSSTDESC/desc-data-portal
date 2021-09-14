@@ -216,16 +216,8 @@ select {
 .intro-header .site-heading,
 .intro-header .post-heading,
 .intro-header .page-heading {
-  padding: 70px 0 20px;
+  padding: 40px 0 0;
   color: white;
-}
-
-@media only screen and (min-width: 768px) {
-  .intro-header .site-heading,
-  .intro-header .post-heading,
-  .intro-header .page-heading {
-    padding: 100px 0 50px;
-  }
 }
 
 .intro-header .site-heading,
