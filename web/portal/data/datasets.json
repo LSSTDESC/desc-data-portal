@@ -61,5 +61,23 @@
         "tags": ["designtool"],
         "doc_name": "202102_design_tool_run_noise_atmo_7splits_SAT_pole",
         "browse": "True"
+    },
+    {
+        "name": "S4 only DT1: Noise only no splits",
+        "id": "aec142b2-d523-11eb-8322-45cc1b8ccd4a",
+        "path": "S4_only_simulation/noise",
+        "size": "31 GB",
+        "tags": ["designtool"],
+        "doc_name": "202102_design_tool_run_noise",
+        "browse": "True"
+    },
+    {
+        "name": "DM only DT1: Atmosphere",
+        "id": "aec142b2-d523-11eb-8322-45cc1b8ccd4a",
+        "path": "DM_only_simulation/atmo",
+        "size": "31 GB",
+        "tags": ["designtool"],
+        "doc_name": "202102_design_tool_run_noise",
+        "browse": "True"
     }
 ]
