@@ -21,9 +21,9 @@ def home():
         session['source_endpoint'] = 1
     return render_template('home.jinja2')
 
-@app.route('/.well-known/acme-challenge/0wjl6iDonkosX8W1IW2VyJgd0leU2-_1jz6cjgWzCHM', methods=['GET'])
+@app.route('/.well-known/acme-challenge/tPHFMghw84LScoKRU1_qNT_tb_QB-7wIoQ14oWvgn7c')
 def letsenc():
-    return '0wjl6iDonkosX8W1IW2VyJgd0leU2-_1jz6cjgWzCHM.0-nr6_DOm9bRpN-ymDhRlyiFcspIlqf1VGkc5V_1Q-A'
+    return 'tPHFMghw84LScoKRU1_qNT_tb_QB-7wIoQ14oWvgn7c.0-nr6_DOm9bRpN-ymDhRlyiFcspIlqf1VGkc5V_1Q-A'
 
 @app.route('/doc/<doc_name>')
 def render_doc(doc_name):
