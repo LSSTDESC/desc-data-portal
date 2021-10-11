@@ -1,4 +1,5 @@
 import requests
+import os
 from flask import (abort, flash, redirect, render_template, request, session,
                    url_for)
 from globus_sdk import (RefreshTokenAuthorizer, TransferAPIError,
@@ -21,9 +22,9 @@ def home():
         session['source_endpoint'] = 1
     return render_template('home.jinja2')
 
-@app.route('/.well-known/acme-challenge/tPHFMghw84LScoKRU1_qNT_tb_QB-7wIoQ14oWvgn7c')
-def letsenc():
-    return 'tPHFMghw84LScoKRU1_qNT_tb_QB-7wIoQ14oWvgn7c.0-nr6_DOm9bRpN-ymDhRlyiFcspIlqf1VGkc5V_1Q-A'
+@app.route('/.well-known/acme-challenge/<letsencrypturl>')
+def letsenc(letsencrypturl):
+    return os.environ.get("LETSENCRYPT_SECRET", "ERROR")
 
 @app.route('/doc/<doc_name>')
 def render_doc(doc_name):
