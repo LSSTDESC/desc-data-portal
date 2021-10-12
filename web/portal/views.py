@@ -24,7 +24,7 @@ def home():
 
 @app.route('/.well-known/acme-challenge/<letsencrypturl>')
 def letsenc(letsencrypturl):
-    return os.environ.get("LETSENCRYPT_SECRET", "ERROR")
+    return app.config["LETSENCRYPT_SECRET"]
 
 @app.route('/doc/<doc_name>')
 def render_doc(doc_name):
