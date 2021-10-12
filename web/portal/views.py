@@ -107,13 +107,13 @@ def profile():
         name = session['name'] = request.form['name']
         email = session['email'] = request.form['email']
         institution = session['institution'] = request.form['institution']
-        source_endpoint = session['source_endpoint'] = int(request.form['endpoint'])
+        source_endpoint = session['source_endpoint'] = 0 # int(request.form['endpoint'])
 
         database.save_profile(identity_id=session['primary_identity'],
                               name=name,
                               email=email,
                               institution=institution,
-                              source_endpoint=int(source_endpoint))
+                              source_endpoint=source_endpoint)
 
         flash('Thank you! Your profile has been successfully updated.')
 
