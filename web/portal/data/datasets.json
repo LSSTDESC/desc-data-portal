@@ -1,7 +1,7 @@
 [
     {
         "name": "DT1: Lensed CMB scalar only",
-        "id": "aec142b2-d523-11eb-8322-45cc1b8ccd4a",
+        "id": "bbadc5d6-d136-4f6f-9ec6-8caab89499b3",
         "path": "202102_design_tool_run/cmb_r0",
         "size": "30 GB",
         "tags": ["designtool"],
@@ -10,7 +10,7 @@
     },
     {
         "name": "DT1: CMB tensor only r=3e-3",
-        "id": "aec142b2-d523-11eb-8322-45cc1b8ccd4a",
+        "id": "064e2715-d999-43a1-bbe5-a3c3cdb1c0a6",
         "path": "202102_design_tool_run/cmb_tensor_only_r3e-3",
         "size": "30 GB",
         "tags": ["designtool"],
@@ -19,7 +19,7 @@
     },
     {
         "name": "DT1: Foregrounds",
-        "id": "aec142b2-d523-11eb-8322-45cc1b8ccd4a",
+        "id": "8ce3428e-5ff1-4c0d-9fce-f960f9900ace",
         "path": "202102_design_tool_run/foregrounds",
         "size": "30 GB",
         "tags": ["designtool"],
@@ -28,7 +28,7 @@
     },
     {
         "name": "DT1: Noise only no splits",
-        "id": "aec142b2-d523-11eb-8322-45cc1b8ccd4a",
+        "id": "74d1d38f-7d28-4c79-a2b4-a56533cd7f07",
         "path": "202102_design_tool_run/noise",
         "size": "31 GB",
         "tags": ["designtool"],
@@ -37,7 +37,7 @@
     },
     {
         "name": "DT1: Noise + Atmosphere, full and 7 splits, LAT Chile",
-        "id": "aec142b2-d523-11eb-8322-45cc1b8ccd4a",
+        "id": "aaf42602-b308-46f0-8945-32ffbae54a19",
         "path": "202102_design_tool_run/noise_atmo_7splits_LAT_chile",
         "size": "172 GB",
         "tags": ["designtool"],
@@ -46,7 +46,7 @@
     },
     {
         "name": "DT1: Noise + Atmosphere, full and 7 splits, LAT Pole",
-        "id": "aec142b2-d523-11eb-8322-45cc1b8ccd4a",
+        "id": "06943999-f1a8-40d4-895a-39a6942404ea",
         "path": "202102_design_tool_run/noise_atmo_7splits_LAT_pole",
         "size": "200 GB",
         "tags": ["designtool"],
@@ -55,7 +55,7 @@
     },
     {
         "name": "DT1: Noise + Atmosphere, full and 7 splits, SAT Pole",
-        "id": "aec142b2-d523-11eb-8322-45cc1b8ccd4a",
+        "id": "62840177-eae5-4449-a45a-c39dd6669d8c",
         "path": "202102_design_tool_run/noise_atmo_7splits_SAT_pole",
         "size": "121 GB",
         "tags": ["designtool"],
