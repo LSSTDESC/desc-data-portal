@@ -245,7 +245,7 @@ def browse(dataset_id=None, endpoint_id=None, endpoint_path=None):
             listing = transfer.operation_ls(endpoint_id, path=endpoint_path)
         except TransferAPIError as err:
             flash('Error [{}]: {}'.format(err.code, err.message))
-            return redirect(url_for('browse'))
+            return redirect(url_for('transfer'))
 
         file_list = [e for e in listing if e['type'] == 'file']
         if dataset_id and 'example' in dataset:
