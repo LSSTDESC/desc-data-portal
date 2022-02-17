@@ -7,6 +7,7 @@
 | Star        | stellar_variability_stats | star_lc_stats_trimmed.db      | star_lc_stats_trimmed.parquet         |
 | SN          | truth_summary             | sum-variabile-31mar.db        | sn_truth_summary.parquet              |
 | SN          | sn_variability_truth      | sum-variabile-31mar.db        | sn_variability_truth.parquet          |
+| SN          | sne_params                | sne_cosmoDC2_v1.1.4_MS_DDF.db | N/A
 
 
 
@@ -39,7 +40,7 @@
 | Column         | Type (SQLite) | Type (parquet) | Description/Comments
 | -------------- | ------------- | -------------- |---------------------------------------------------------------
 | id             | TEXT          | int64          | id stored here as int in parquet for efficient queries
-| obsHistID      | INTEGER       | int32          | identifies observation (visit)
+| obsHistID      | INT           | int32          | identifies observation (visit)
 | MJD            | DOUBLE        | double         | modified Julian date of observation
 | bandpass       | TEXT          | String         | bandpass used for this observation
 | delta_flux     | DOUBLE        | float          | delta from mean flux for this bandpass (see stats table below)
@@ -49,7 +50,7 @@
 | Column         | Type (SQLite) | Type (parquet) | Description/Comments
 | -------------- | ------------- | -------------- | --------------------
 | id             | TEXT          | String         | id for star
-| model          | TEXT          | String         |
+| model          | TEXT          | String         | variability model, e.g. "MLT"
 | mean_u         | DOUBLE        | float          | mean flux in u-band
 | mean_g         | DOUBLE        | float          | mean flux in g-band
 | mean_r         | DOUBLE        | float          | mean flux in r-band
@@ -95,7 +96,22 @@ be a string; values are generally not convertible to integers.
 | Column         | Type (SQLite) | Type (parquet) | Description/Comments
 | -------------- | ------------- | -------------- | --------------------------------------------------------------
 | id             | TEXT          | String         | id of object
-| obsHistID      | INTEGER       | int32          | identifies observation (visit)
+| obsHistID      | INT           | int32          | identifies observation (visit)
 | MJD            | DOUBLE        | double         | modified Julian date of observation
 | bandpass       | TEXT          | String         | bandpass used for this observation
 | delta_flux     | DOUBLE        | float          | delta from mean flux for this bandpass (mean is typically zero)
+
+## sne_params
+
+| Column          | Type         | Description/Comments
+| --------------- | ----------   | --------------------
+| htmid_level_6   | INT          | used for spatial indexing
+| galaxy_id       | BIGINT       | host galaxy id
+| mB              | DOUBLE       | model parameter
+| t0_in           | DOUBLE       | model parameter
+| x0_in           | DOUBLE       | model parameter
+| x1_in           | DOUBLE       | model parameter
+| z_in            | DOUBLE       | model parameter
+| snid_in         | TEXT         | id of object
+| snra_in         | DOUBLE       | right ascension
+| sndec_in        | DOUBLE       | declination
