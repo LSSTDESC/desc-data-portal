@@ -2,9 +2,9 @@
 
 | Object type | Table name                | SQLite basename               | Parquet basename                      |
 | ----------- | ------------------------- | ----------------------------- | ------------------------------------- |
-| Star        | truth_summary             | star_truth_summary_trimmed.db | star_truth_summary_trimmed.parquet    |
+| Star        | truth_summary             | star_truth_summary_trimmed.db | star_truth_summary_trimmed_int_id.parquet    |
 | Star        | stellar_variability_truth | star_variability_truth.db     | star_variability_truth_int_id.parquet |
-| Star        | stellar_variability_stats | star_lc_stats_trimmed.db      | star_lc_stats_trimmed.parquet         |
+| Star        | stellar_variability_stats | star_lc_stats_trimmed.db      | star_lc_stats_trimmed_int_id.parquet         |
 | SN          | truth_summary             | sum-variabile-31mar.db        | sn_truth_summary.parquet              |
 | SN          | sn_variability_truth      | sum-variabile-31mar.db        | sn_variability_truth.parquet          |
 | SN          | sne_params                | sne_cosmoDC2_v1.1.4_MS_DDF.db | N/A
@@ -15,7 +15,7 @@
 
 | Column         | Type (SQLite) | Type (parquet) | Description/Comments
 | -------------- | ------------- | -------------- | -------------------------------------------------------------
-| id             | TEXT          | String         | id for the star. Though nominally a string, convertible to int
+| id             | TEXT          | int64          | id for the star
 | host_galaxy    | BIGINT        | int64          | id of host galaxy
 | ra             | DOUBLE        | double         | right ascension
 | dec            | DOUBLE        | double         | declination
@@ -49,7 +49,7 @@
 
 | Column         | Type (SQLite) | Type (parquet) | Description/Comments
 | -------------- | ------------- | -------------- | --------------------
-| id             | TEXT          | String         | id for star
+| id             | TEXT          | int64          | id for star
 | model          | TEXT          | String         | variability model, e.g. "MLT"
 | mean_u         | DOUBLE        | float          | mean flux in u-band
 | mean_g         | DOUBLE        | float          | mean flux in g-band
