@@ -2,9 +2,9 @@
 
 | Object type | Table name                | SQLite basename               | Parquet basename                      |
 | ----------- | ------------------------- | ----------------------------- | ------------------------------------- |
-| Star        | truth_summary             | star_truth_summary_trimmed.db | star_truth_summary_trimmed_int_id.parquet    |
+| Star        | truth_summary             | star_truth_summary_trimmed.db | star_truth_summary_int_id.parquet    |
 | Star        | stellar_variability_truth | star_variability_truth.db     | star_variability_truth_int_id.parquet |
-| Star        | stellar_variability_stats | star_lc_stats_trimmed.db      | star_lc_stats_trimmed_int_id.parquet         |
+| Star        | stellar_variability_stats | star_lc_stats_trimmed.db      | star_lc_stats_int_id.parquet         |
 | SN          | truth_summary             | sum-variabile-31mar.db        | sn_truth_summary.parquet              |
 | SN          | sn_variability_truth      | sum-variabile-31mar.db        | sn_variability_truth.parquet          |
 | SN          | sne_params                | sne_cosmoDC2_v1.1.4_MS_DDF.db | N/A
