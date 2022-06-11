@@ -103,7 +103,7 @@
 
     {
         "name": "DC2 Calibrated Exposure dr6 v4 (2 patches)",
-        "id": ""a55e4d7a-874d-416c-9e20-e973f8d83cde,
+        "id": "a55e4d7a-874d-416c-9e20-e973f8d83cde",
         "path": "lsstdesc-public/dc2/run2.2i-dr6-v4/calexp-t3828-t3829-small",
         "size": "435 GB",
         "doc_name": "dc2_sim_sky_survey",
