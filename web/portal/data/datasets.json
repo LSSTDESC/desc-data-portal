@@ -22,7 +22,7 @@
     },
 
     {
-        "name": "DC2 Truth Star dr6 v4",
+        "name": "DC2 Unmerged Truth Star (for release v4)",
         "id": "1945e46e-7282-4e60-8eb8-c988fe807d55",
         "path": "lsstdesc-public/dc2/run2.2i-dr6-v4/truth_star",
         "size": "59 GB",
@@ -33,7 +33,7 @@
     },
 
     {
-        "name": "DC2 Truth SN dr6 v4",
+        "name": "DC2 Unmerged Truth SN (for release v4)",
         "id": "4dab60f0-1b22-4304-b01d-519311783c4c",
         "path": "lsstdesc-public/dc2/run2.2i-dr6-v4/truth_sn",
         "size": "2.2 GB",
@@ -43,7 +43,7 @@
     },
 
     {
-        "name": "DC2 Truth Galaxy dr6 v4",
+        "name": "DC2 Unmerged Truth Galaxy (for release v4)",
         "id": "758aaac0-7443-4f51-be4a-0b652c9f8adc",
         "path": "lsstdesc-public/dc2/run2.2i-dr6-v4/truth_galaxy/truth_galaxy_summary_v1-0-0",
         "size": "68 GB",
