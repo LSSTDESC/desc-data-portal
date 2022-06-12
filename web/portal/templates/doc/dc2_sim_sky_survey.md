@@ -1,5 +1,7 @@
 ## DC2 Simulated Sky Survey
 
+_Updated June 15, 2022: The most up-to-date version for the public DC2 data sets is `v4`. Previous versions have been deprecated._
+
 The DC2 Simulated Sky Survey is a 300-sq-deq simulated survey
 in six optical bands with observations following a reference LSST observing cadence.
 
@@ -10,23 +12,30 @@ To learn more about the DC2 Simulated Sky Survey, you can read:
 * [DESC DC2 Data Release Note](https://arxiv.org/abs/2101.04855):
   a brief note about the released dataset, including data file format, data partition scheme, and schema tables.
 
-Two kinds of datasets are provided: [catalogs](#catalogs) and [images](#images). Follow the instructions below for the type you wish to download.
+Two kinds of datasets are provided: [Tables](#tables) (including object and truth tables) and [intermediate data products](#intermediate-data-products).
+Follow the instructions below for the data sets you wish to download.
+
 If you use the DC2 Simulated Sky Survey in your work, we ask that you cite both publications above.
 
-### Catalogs
+### Tables
 
-**NOTE:** The catalog collections `DC2 Object DPDD dr6 v1` and `DC2 Truth Match dr6 v1` are *deprecated*. Choose the corresponding v2 dataset instead.
+#### Step 1: Download the Table files
 
-#### Step 1: Download the catalog files
-
-Follow [these instructions](download) to download "Object DPDD" or "Truth Match" data files from the DC2 Simulated Sky Survey.
+Follow [these instructions](download) to download "Object DPDD", "Truth Match", and/or "Unmerged Truth" data files
+from the DC2 Simulated Sky Survey.
+You can find the description and table schema of these data sets in the [Data Release Note](https://arxiv.org/abs/2101.04855).
 You can download the full data set or, if space is at a premium, a recommended subset of files.
 
-The data files you downloaded are in Parquet format, partitioned into sky regions
+For "Object DPDD" and "Truth Match" data sets, the files are in Parquet format and are partitioned into sky regions called "tracts"
 (see Sec. 4.1 of the [Release Note](https://arxiv.org/abs/2101.04855) for details).
-You can access these files by standard tools that read Parquet format.
-We additionally provide a high-level Python package `GCRCatalogs` to facilitate easy access.
 
+For "Unmerged Truth Star" and "Unmerged Truth SN" data sets, you can choose to download in Parquet format or in SQLite.
+The latter is larger in size but have better running performance if you are matching across tables.
+
+For "Unmerged Truth Galaxy", the files are in Parquet format and are partitioned into healpixels.
+
+You can access all Parquet files by any standard tools that read Parquet format.
+We additionally provide a high-level Python package `GCRCatalogs` to facilitate easy access (see below).
 Note that on some very old (e.g., older than 10 years) machines, reading Parquet files may be difficult.
 If that is a problem for you, please [let us know](https://github.com/LSSTDESC/desc-data-portal/discussions).
 
@@ -53,9 +62,9 @@ You can find examples of using `GCRCatalogs` in our [tutorial notebooks](https:/
 
 If you're planning to run the example notebooks and don't already have JupyterLab on your laptop, see [these instructions](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html).
 
-## Images
+## Intermediate data products
 
-Unlike the catalog datasets, it is not possible to choose a subset of the image collection datasets.
-For a detailed description of the coadded images and associated files included, please see Appendix C of the [DESC DC2 Data Release Note](https://arxiv.org/abs/2101.04855).
-
-Two image collections (of different sky coverages) are provided. `DC2 coadd dr6 v2` includes all coadded images belonging to tracts 3828 and 3829. `DC2 coadd dr6 v2 small` includes coadded images for a single patch for each of these tracts.
+We provide a subset of intermediate data products from the LSST Science Pipelines, including raw images, calibrated exposures, and coadded images.
+Unlike the Table datasets, it is not possible to choose a even smaller subset of the intermediate data products that we provided.
+For a detailed description of these data products and associated files included, please see Section 3.4 of the [Data Release Note](https://arxiv.org/abs/2101.04855).
+To see how these intermediate data products are organized, please see Appendix C of the [Data Release Note](https://arxiv.org/abs/2101.04855).
