@@ -18,8 +18,8 @@ However, please consider switching to the conda-forge channel;
 see [instructions](https://conda-forge.org/docs/user/introduction.html#how-can-i-install-packages-from-conda-forge)
 and [why](https://conda-forge.org/docs/user/tipsandtricks.html#using-multiple-channels).
 
-*NOTE:* In order to access the latest catalogs (as of June 2021) you need `GCRCatalogs`
-version v1.3.3 or later. When using either of the install methods described below you will get a suitable released version. If you have already installed `GCRCatalogs` for an earlier
+*NOTE:* In order to access the latest catalogs (as of June 2022) you need `GCRCatalogs`
+version v1.4.0 or later. When using either of the install methods described below you will get a suitable released version. If you have already installed `GCRCatalogs` for an earlier
 data release, you can update instead.
 
 #### Install
@@ -59,7 +59,7 @@ pip install wheel  # optional
 To install `GCRCatalogs` with pip, run
 
 ```bash
-pip install https://github.com/LSSTDESC/gcr-catalogs/archive/v1.3.3.tar.gz#egg=GCRCatalogs[full]
+pip install https://github.com/LSSTDESC/gcr-catalogs/archive/v1.4.0.tar.gz#egg=GCRCatalogs[full]
 ```
 
 #### Update
@@ -67,7 +67,7 @@ pip install https://github.com/LSSTDESC/gcr-catalogs/archive/v1.3.3.tar.gz#egg=G
 To update with pip, use the `--upgrade` option:
 
 ```bash
-pip install --upgrade https://github.com/LSSTDESC/gcr-catalogs/archive/v1.3.3.tar.gz#egg=GCRCatalogs[full]
+pip install --upgrade https://github.com/LSSTDESC/gcr-catalogs/archive/v1.4.0.tar.gz#egg=GCRCatalogs[full]
 ```
 
 ### Configure: Setting up `root_dir` for GCRCatalogs
