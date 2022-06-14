@@ -26,7 +26,6 @@
         "id": "1945e46e-7282-4e60-8eb8-c988fe807d55",
         "path": "lsstdesc-public/dc2/run2.2i-dr6-v4/truth_star",
         "size": "59 GB",
-        "example": ["truth_star_summary_v1-0-0.parquet", "truth_star_variability_v1-0-0.parquet"],
         "doc_name": "dc2_sim_sky_survey",
         "tags": ["catalog"],
         "browse": "True"
