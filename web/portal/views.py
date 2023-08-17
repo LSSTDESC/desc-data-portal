@@ -58,7 +58,7 @@ def logout():
             # only where the relevant token is actually present
             if token_info[ty] is not None):
         client.oauth2_revoke_token(
-            token, additional_params={'token_type_hint': token_type})
+            token, body_params={'token_type_hint': token_type})
 
     # Destroy the session state
     session.clear()
@@ -155,7 +155,7 @@ def authcallback():
             {'signup': 1} if request.args.get('signup') else {})
 
         auth_uri = client.oauth2_get_authorize_url(
-            additional_params=additional_authorize_params)
+            query_params=additional_authorize_params)
 
         return redirect(auth_uri)
     else:
@@ -164,13 +164,13 @@ def authcallback():
         code = request.args.get('code')
         tokens = client.oauth2_exchange_code_for_tokens(code)
 
-        id_token = tokens.decode_id_token(client)
+        id_token = tokens.decode_id_token()
         session.update(
             tokens=tokens.by_resource_server,
             is_authenticated=True,
-            name=id_token.get('name', ''),
-            email=id_token.get('email', ''),
-            institution=id_token.get('organization', ''),
+            name=id_token.get('name'),
+            email=id_token.get('email'),
+            institution=id_token.get('organization'),
             primary_username=id_token.get('preferred_username'),
             primary_identity=id_token.get('sub'),
         )
