@@ -1,4 +1,5 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
+ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update --quiet -y && \
     apt-get install -y python3-flask python3-pip
 WORKDIR /app
